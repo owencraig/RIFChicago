@@ -1,0 +1,184 @@
+﻿@import "../variables";
+@import "../mixins";
+@import "../../libs/bootstrap/stylesheets/bootstrap/normalize";
+
+// bootstrap layout
+* {
+    @include box-sizing(border-box);
+}
+
+*:before,
+*:after {
+    @include box-sizing(border-box);
+}
+
+.container {
+    @include container-fixed;
+
+    @media #{$media-sm-min} {
+        width: $container-sm;
+    }
+
+    @media #{$media-md-min} {
+        width: $container-md;
+    }
+
+    @media #{$media-lg-min} {
+        width: $container-lg;
+    }
+}
+
+.row {
+    @include clearfix;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+
+body {
+    @include font-poppins-normal;
+    color: $black;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 1.42857143;
+}
+
+.page-content {
+    min-height: 100px;
+    position: relative;
+    //move up to sit under nav, next to logo
+    @media #{$media-desktop-view} {
+        top: -140px;
+    }
+}
+
+.rif-book {
+    background: url(../images/rif-book.png) no-repeat 0 0;
+    height: 60px;
+    margin: 0 auto $v-spacing-sm;
+    width: 60px;
+
+    @media #{$media-desktop-view} {
+        left: 50%;
+        margin:0 0 0 -30px;
+        position: absolute;
+        top: 0;
+        z-index: 10;
+    }
+}
+
+/* reset header margins */
+h1, h2, h3, h4, h5 {
+    margin: 0;
+}
+
+h1,
+.h1 {
+    @include h1;
+}
+
+h3,
+.h3 {
+    @include h3;
+}
+
+h4,
+.h4 {
+    @include h4;
+}
+
+h5,
+.h5 {
+    @include h5;
+}
+
+p {
+    @include body-text;
+    margin: 0 0 $v-spacing-xs;
+
+    &.medium {
+        @include font-poppins-medium;
+    }
+}
+
+b,
+strong,
+.medium {
+    @include font-poppins-medium;
+}
+
+
+
+// COLOR OVERLAYS & CIRCLES
+.circle-img {
+    img {
+        @include img-responsive;
+    }
+
+    &.large {
+        height: 180px;
+        width: 180px;
+    }
+
+    &.medium {
+        height: 140px;
+        width: 140px;
+    }
+
+    &.small {
+        height: 120px;
+        width: 120px;
+    }
+
+    &.orange {
+        @include circle-img($overlay-orange);
+    }
+
+    &.blue {
+        @include circle-img($overlay-blue);
+    }
+
+    &.green {
+        @include circle-img($overlay-green);
+    }
+
+    &.white {
+        @include circle-img($overlay-white);
+    }
+
+    &.purple {
+        @include circle-img($overlay-purple);
+    }
+}
+
+
+// INPUTS
+.rif-form {
+
+    input[type=text] {
+        @include font-poppins-medium;
+        border: 2px solid $light-green;
+        border-radius: 5px;
+        color: $black;
+        font-size: 14px;
+        padding: 15px 10px;
+        text-align: right;
+
+        &:focus {
+            outline: none;
+        }
+
+        &::-webkit-input-placeholder,
+        &::-moz-placeholder,
+        &:-ms-input-placeholder,
+        &:-moz-placeholder {
+            color: $black;
+            opacity: 1; 
+        }
+
+        @media #{$media-mobile-view} {
+            display:block;
+            width:100%;
+        }
+    }
+}

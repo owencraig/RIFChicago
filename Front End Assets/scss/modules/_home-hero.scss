@@ -1,0 +1,95 @@
+﻿@import "../variables";
+@import "../mixins";
+
+.home-hero {
+    @include clearfix;
+
+    .wrapper {
+        @include make-md-column(10);
+        @include make-md-column-offset(1);
+    }
+
+    .top-circle {
+        @include make-md-column-offset(2);
+
+        @media #{$media-mobile-view} {
+            text-align: center;
+        }
+    }
+
+    h1 {
+        margin: $v-spacing-sm 0 $v-spacing-xs;
+
+        @media #{$media-desktop-view} {
+            padding-left: $grid-gutter-width;
+            padding-right: $grid-gutter-width;
+        }
+    }
+
+    .bottom-circles {
+        @include make-row;
+
+        > div {
+            @include make-sm-column(6);
+        }
+
+        .left {
+        }
+
+        .right {
+            text-align: center;
+        }
+    }
+
+    .donation,
+    .donation-note {
+        text-align: center;
+    }
+
+    .donation {
+        margin: $v-spacing-sm;
+
+        @media #{$media-desktop-view} {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        .rif-form {
+            @media #{$media-desktop-view} {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            > span {
+                position: relative;
+                 
+                > span {
+                    @include font-poppins-medium;
+                    font-size: 18px;
+                    left: 10px;
+                    line-height: 18px;
+                    margin-top: -9px;
+                    top: 50%;
+                    position: absolute;
+                }
+
+                @media #{$media-mobile-view} {
+                    display:block;
+                    margin-top: $v-spacing-xs;
+                }
+
+                @media #{$media-desktop-view} {
+                    display: inline-block;
+                    margin-left: $grid-gutter-width-half;
+                }
+            }
+        }
+    }
+
+    .donation-note {
+        @include font-poppins-medium;
+        color: $light-grey;
+    }
+}

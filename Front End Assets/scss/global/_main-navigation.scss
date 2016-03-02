@@ -1,0 +1,55 @@
+﻿@import "../variables";
+@import "../mixins";
+
+.main-navigation {
+
+    ul {
+        @include clearfix;
+        @include remove-list-style;
+        margin-top: $v-spacing-xs;
+
+        @media #{$media-desktop-view} {
+            margin-top: 35px;
+
+            li {
+                float: left;
+                margin-right: 50px;
+            }
+        }
+
+        li {
+            a {
+                @include link-transition;
+                @include font-poppins-medium;
+                color: $black;
+                font-size: 12px;
+                letter-spacing: 2px;
+                text-decoration: none;
+                text-transform: uppercase;
+
+                &:hover {
+                    color: $green;
+                }
+            }
+
+            &.button {
+                a {
+                    @include button-rounded;
+                    @include button-green;
+                }
+            }
+        }
+
+        @media #{$media-mobile-view} {
+
+            li {
+                display: block;
+                margin-bottom: 15px;
+
+                a {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}

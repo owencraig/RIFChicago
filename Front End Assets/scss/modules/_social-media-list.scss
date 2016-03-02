@@ -1,0 +1,48 @@
+﻿@import "../variables";
+@import "../mixins";
+
+.social-media-list {
+    @include clearfix;
+    @include remove-list-style;
+
+    li {
+        display:block;
+        float:left;
+        margin-right: $grid-gutter-width-half; 
+
+        a {
+            display:block;
+            text-decoration:none;
+
+            &:before {
+                @include font-awesome;
+                @include link-transition;
+                color:$white;
+                font-size:30px;
+            }
+
+            &:hover {
+                &:before {
+                    color:$green;
+                }
+            }
+
+            &.instagram {
+                &:before {
+                    content:$fa-var-instagram;
+                }
+            }
+            &.twitter {
+                &:before {
+                    content:$fa-var-twitter;
+                }
+            }
+
+            &.facebook {
+                &:before {
+                    content:$fa-var-facebook;
+                }
+            }
+        }
+    } 
+}

@@ -1,0 +1,35 @@
+﻿@import "../libs/bootstrap/stylesheets/bootstrap/variables";
+
+// COLORS
+$black: #231f20;
+$white: #ffffff;
+$light-grey: #b7c2c7;
+$light-blue: #72c2e6;
+$light-green: #9aedd8;
+$green: #58877b;
+
+// COLOR OVERLAYS
+$overlay-orange: rgba(255,170,51,0.5);
+$overlay-blue: rgba(114,194,230,0.5);
+$overlay-green: rgba(154,237,216,0.5); 
+$overlay-white: rgba(242,242,242,0.5);
+$overlay-purple: rgba(209,175,219,0.5);
+
+// SPACING
+$v-spacing-xs: 15px;
+$v-spacing-sm: 30px;
+$v-spacing-lg: 60px;
+$grid-gutter-width-half: ($grid-gutter-width / 2);
+$grid-gutter-width-double: ($grid-gutter-width * 2);
+
+
+// MEDIA QUERIES
+$media-mobile-view: "(max-width: #{$screen-sm-max})";
+$media-desktop-view: "(min-width: #{$screen-md-min})";
+$media-xxs: "(max-width: 480px)";
+$media-xs: "(max-width: #{$screen-xs-max})";
+$media-sm-max: "(max-width: #{$screen-sm-max})";
+$media-sm-min: "(min-width: #{$screen-sm-min})";
+$media-md-max: "(max-width: #{$screen-md-max})";
+$media-md-min: "(min-width: #{$screen-md-min})";
+$media-lg-min: "(min-width: #{$screen-lg-min})";

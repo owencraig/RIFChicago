@@ -1,0 +1,53 @@
+﻿@import "../variables";
+@import "../mixins";
+
+.logo-nav { 
+    @include make-row;
+    margin-bottom: $v-spacing-sm;
+    margin-top: $v-spacing-sm;
+
+    @media #{$media-desktop-view} {
+        margin-top: 10px;
+    }
+
+    .logo {
+        @include make-xs-column(4);
+        @include make-md-column(3);
+
+        a {
+            display: block;
+
+            @media #{$media-md-min} {
+                margin-left: -10px;
+            }
+        }
+
+        img {
+            @include img-responsive;
+
+            @media #{$media-xxs} {
+                margin: auto;
+                max-height: 150px;
+            }
+        }
+    }
+
+    nav {
+        @include make-xs-column(8);
+        @include make-md-column(9);
+    }
+
+    @media #{$media-xxs} {
+        .logo,
+        nav {
+            float: none;
+            text-align: center;
+            width: 100%;
+        }
+
+        .logo {
+            margin-bottom: $v-spacing-sm;
+        }
+    }
+}
+

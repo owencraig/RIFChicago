@@ -1,0 +1,147 @@
+﻿@import 'variables';
+@import 'fonts';
+@import "../libs/bootstrap/stylesheets/bootstrap/mixins";
+@import "../libs/font-awesome/scss/_variables.scss"; 
+
+
+@mixin remove-list-style() {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+// HEADERS AND TEXT STYLES
+@mixin h1 {
+    @include font-poppins-light;   
+    color: $light-blue;
+    letter-spacing: 2px;
+    text-align:center;
+    text-transform: uppercase;
+
+    @media #{$media-desktop-view} {
+        font-size: 30px;
+        line-height: 42px;
+    }
+}
+
+@mixin h3 {
+    @include font-poppins-medium;
+    font-size: 18px;
+    letter-spacing: 2px;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+
+@mixin h4 {
+    @include font-poppins-medium;
+    letter-spacing: 2px;
+
+    @media #{$media-desktop-view} {
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
+
+@mixin h5 {
+    @include font-poppins-medium;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    @media #{$media-desktop-view} {
+        font-size: 12px;
+        line-height: 30px;
+    }
+}
+
+@mixin body-text {
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 24px;
+}
+
+@mixin small-text {
+    font-size: 12px;
+    letter-spacing: 1px;
+    line-height: 24px;
+}
+
+
+// LINKS & BUTTONS
+@mixin link-transition() {
+    @include transition(all, ease, 0.4s);
+}
+
+@mixin button-rounded() {
+    @include link-transition;
+    border-radius: 5px;
+    padding: 13px 17px;
+}
+
+@mixin button-green() {
+    background: $light-green;
+    color: $green;
+
+    &:hover {
+        background: $light-grey;
+        color: $green;
+    }
+}
+
+@mixin make-white-links() {
+    a, a:visited, a:active {
+        @include link-transition;
+        color: $white;
+        text-decoration: none;
+
+        &:hover {
+            color: $green;
+        }
+    }
+}
+
+
+// INLINE BACKGROUND IMAGES
+@mixin background-cover-inline($x-pos, $y-pos) {
+    background-position: $x-pos $y-pos;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+// BOX SHADOWS
+@mixin box-shadow() {
+    -webkit-box-shadow: 25px 25px 50px 0 rgba(0,0,0,.2);
+    box-shadow: 25px 25px 50px 0 rgba(0,0,0,.2);
+}
+
+// CIRCLES
+@mixin circle() {
+    border-radius: 50%;
+}
+
+// CIRCLES WITH COLOR OVERLAY
+@mixin circle-img($color) {
+    @include box-shadow;
+    @include circle; 
+    display: inline-block; 
+    position: relative;
+
+    &:after {
+        @include circle;
+        background: $color;
+        content: "";
+        display: block;
+        left: 0;
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    img {
+        @include circle;
+        display: block;
+        filter: grayscale(1);
+        -webkit-filter: grayscale(1);
+    }
+}
