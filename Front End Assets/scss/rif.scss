@@ -5,11 +5,19 @@
 @import 'global/header';
 @import 'global/main-navigation';
 @import 'global/footer'; 
-
+@import 'global/bootstrap-modal'; 
+@import 'global/responsive-iframe';  
+@import 'global/videos';  
+ 
 /* layouts */
 /*@import 'layouts/';*/ 
 
 /* modules */
+@import 'modules/rif-book'; 
 @import 'modules/home-hero';
-@import 'modules/social-media-list';   
+@import 'modules/social-media-list'; 
+@import 'modules/text-image-video-hero';    
+
+
+
   

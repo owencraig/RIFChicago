@@ -1,0 +1,19 @@
+﻿@import "../variables";
+@import "../mixins";
+
+.rif-book {
+    @include box-shadow;
+    @include circle;
+    background: url(../images/rif-book.png) no-repeat 0 0;
+    height: 60px;
+    margin: 0 auto $v-spacing-sm;
+    width: 60px;
+
+    @media #{$media-desktop-view} {
+        left: 50%;
+        margin:0 0 0 -30px;
+        position: absolute;
+        top: 0;
+        z-index: 10;
+    }
+} 

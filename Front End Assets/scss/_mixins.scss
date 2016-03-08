@@ -67,6 +67,17 @@
 }
 
 
+// COLOR TYPE 
+
+@mixin color-text($color) {
+    color:$color;
+
+    h1,h2,h3,h4,h5,p {
+        color:$color;
+    }
+}
+
+
 // LINKS & BUTTONS
 @mixin link-transition() {
     @include transition(all, ease, 0.4s);

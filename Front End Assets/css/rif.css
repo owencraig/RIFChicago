@@ -225,6 +225,18 @@ th {
   .row:after {
     clear: both; }
 
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto; }
+
 body {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
@@ -236,22 +248,6 @@ body {
 .page-content {
   min-height: 100px;
   position: relative; }
-  @media (min-width: 992px) {
-    .page-content {
-      top: -140px; } }
-
-.rif-book {
-  background: url(../images/rif-book.png) no-repeat 0 0;
-  height: 60px;
-  margin: 0 auto 30px;
-  width: 60px; }
-  @media (min-width: 992px) {
-    .rif-book {
-      left: 50%;
-      margin: 0 0 0 -30px;
-      position: absolute;
-      top: 0;
-      z-index: 10; } }
 
 /* reset header margins */
 h1, h2, h3, h4, h5 {
@@ -317,6 +313,9 @@ strong,
 .medium {
   font-family: "Poppins", sans-serif;
   font-weight: 500; }
+
+.module {
+  position: relative; }
 
 .circle-img img {
   display: block;
@@ -445,6 +444,9 @@ strong,
     filter: grayscale(1);
     -webkit-filter: grayscale(1); }
 
+.bg-blue {
+  background: #72c2e6; }
+
 .rif-form input[type=text] {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
@@ -475,7 +477,8 @@ strong,
   margin-left: -15px;
   margin-right: -15px;
   margin-bottom: 30px;
-  margin-top: 30px; }
+  margin-top: 30px;
+  position: relative; }
   .logo-nav:before, .logo-nav:after {
     content: " ";
     display: table; }
@@ -494,11 +497,24 @@ strong,
     position: relative;
     min-height: 1px;
     padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
     padding-right: 15px; }
     @media (min-width: 992px) {
       .logo-nav .logo {
         float: left;
+        width: 16.66667%; } }
+    @media (min-width: 1200px) {
+      .logo-nav .logo {
+        float: left;
         width: 25%; } }
+    @media (min-width: 992px) {
+      .logo-nav .logo {
+        left: 0;
+        position: absolute;
+        top: 0; } }
     .logo-nav .logo a {
       display: block; }
       @media (min-width: 992px) {
@@ -514,8 +530,6 @@ strong,
           max-height: 150px; } }
   .logo-nav nav {
     position: relative;
-    float: left;
-    width: 66.66667%;
     min-height: 1px;
     padding-left: 15px;
     padding-right: 15px;
@@ -523,10 +537,14 @@ strong,
     min-height: 1px;
     padding-left: 15px;
     padding-right: 15px; }
+    @media (min-width: 768px) {
+      .logo-nav nav {
+        float: left;
+        width: 66.66667%; } }
     @media (min-width: 992px) {
       .logo-nav nav {
         float: left;
-        width: 75%; } }
+        width: 100%; } }
   @media (max-width: 480px) {
     .logo-nav .logo,
     .logo-nav nav {
@@ -550,6 +568,10 @@ strong,
   font-weight: normal;
   font-style: normal; }
 
+@media (min-width: 992px) {
+  .main-navigation {
+    text-align: center; } }
+
 .main-navigation ul {
   list-style: none;
   margin: 0;
@@ -562,10 +584,12 @@ strong,
     clear: both; }
   @media (min-width: 992px) {
     .main-navigation ul {
-      margin-top: 35px; }
+      display: inline-block;
+      margin-top: 35px;
+      text-align: center; }
       .main-navigation ul li {
-        float: left;
-        margin-right: 50px; } }
+        display: inline-block;
+        margin: 0 25px; } }
   .main-navigation ul li a {
     -webkit-transition: all, ease, 0.4s;
     -o-transition: all, ease, 0.4s;
@@ -759,9 +783,221 @@ footer .logo-nav {
             margin-right: 10px;
             vertical-align: middle; } }
 
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../libs/font-awesome/fonts/fontawesome-webfont.eot?v=4.5.0");
+  src: url("../libs/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.5.0") format("embedded-opentype"), url("../libs/font-awesome/fonts/fontawesome-webfont.woff2?v=4.5.0") format("woff2"), url("../libs/font-awesome/fonts/fontawesome-webfont.woff?v=4.5.0") format("woff"), url("../libs/font-awesome/fonts/fontawesome-webfont.ttf?v=4.5.0") format("truetype"), url("../libs/font-awesome/fonts/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+.modal-open {
+  overflow: hidden; }
+
+.modal {
+  display: none;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  -webkit-overflow-scrolling: touch;
+  outline: 0; }
+  .modal.fade .modal-dialog {
+    -webkit-transform: translate(0, -25%);
+    -ms-transform: translate(0, -25%);
+    -o-transform: translate(0, -25%);
+    transform: translate(0, -25%);
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+    -moz-transition: -moz-transform 0.3s ease-out;
+    -o-transition: -o-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out; }
+  .modal.in .modal-dialog {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0); }
+
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto; }
+
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 10px; }
+
+.modal-content {
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #999;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  background-clip: padding-box;
+  outline: 0; }
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #000; }
+  .modal-backdrop.fade {
+    opacity: 0;
+    filter: alpha(opacity=0); }
+  .modal-backdrop.in {
+    opacity: 0.5;
+    filter: alpha(opacity=50); }
+
+.modal-header {
+  padding: 15px;
+  border-bottom: 1px solid #e5e5e5;
+  min-height: 16.42857px; }
+
+.modal-header .close {
+  margin-top: -2px; }
+
+.modal-title {
+  margin: 0;
+  line-height: 1.42857; }
+
+.modal-body {
+  position: relative;
+  padding: 15px; }
+
+.modal-footer {
+  padding: 15px;
+  text-align: right;
+  border-top: 1px solid #e5e5e5; }
+  .modal-footer:before, .modal-footer:after {
+    content: " ";
+    display: table; }
+  .modal-footer:after {
+    clear: both; }
+  .modal-footer .btn + .btn {
+    margin-left: 5px;
+    margin-bottom: 0; }
+  .modal-footer .btn-group .btn + .btn {
+    margin-left: -1px; }
+  .modal-footer .btn-block + .btn-block {
+    margin-left: 0; }
+
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll; }
+
+@media (min-width: 768px) {
+  .modal-dialog {
+    width: 600px;
+    margin: 30px auto; }
+  .modal-sm {
+    width: 300px; } }
+
+@media (min-width: 992px) {
+  .modal-lg {
+    width: 900px; } }
+
+.modal-header .close {
+  display: inline-block; }
+  .modal-header .close:before {
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    color: #9aedd8;
+    content: "";
+    font-size: 20px; }
+  @media (min-width: 992px) {
+    .modal-header .close:hover {
+      cursor: pointer; }
+      .modal-header .close:hover:before {
+        color: #777777; } }
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../libs/font-awesome/fonts/fontawesome-webfont.eot?v=4.5.0");
+  src: url("../libs/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.5.0") format("embedded-opentype"), url("../libs/font-awesome/fonts/fontawesome-webfont.woff2?v=4.5.0") format("woff2"), url("../libs/font-awesome/fonts/fontawesome-webfont.woff?v=4.5.0") format("woff"), url("../libs/font-awesome/fonts/fontawesome-webfont.ttf?v=4.5.0") format("truetype"), url("../libs/font-awesome/fonts/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+.responsive-iframe {
+  height: 0;
+  overflow: hidden;
+  padding-top: 35px;
+  padding-bottom: 56.25%;
+  position: relative; }
+  .responsive-iframe iframe {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%; }
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../libs/font-awesome/fonts/fontawesome-webfont.eot?v=4.5.0");
+  src: url("../libs/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.5.0") format("embedded-opentype"), url("../libs/font-awesome/fonts/fontawesome-webfont.woff2?v=4.5.0") format("woff2"), url("../libs/font-awesome/fonts/fontawesome-webfont.woff?v=4.5.0") format("woff"), url("../libs/font-awesome/fonts/fontawesome-webfont.ttf?v=4.5.0") format("truetype"), url("../libs/font-awesome/fonts/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+.video-thumb {
+  position: relative; }
+  .video-thumb .play {
+    border-radius: 50%;
+    background: #f2f2f2;
+    height: 60px;
+    left: 50%;
+    line-height: 60px;
+    margin-left: -30px;
+    margin-top: -30px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 60px; }
+    .video-thumb .play:before {
+      font-family: FontAwesome;
+      font-weight: normal;
+      font-style: normal;
+      color: #9aedd8;
+      content: "";
+      font-size: 30px;
+      left: 3px;
+      position: relative; }
+    @media (min-width: 992px) {
+      .video-thumb .play:hover {
+        cursor: pointer; } }
+
 /* layouts */
 /*@import 'layouts/';*/
 /* modules */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../libs/font-awesome/fonts/fontawesome-webfont.eot?v=4.5.0");
+  src: url("../libs/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.5.0") format("embedded-opentype"), url("../libs/font-awesome/fonts/fontawesome-webfont.woff2?v=4.5.0") format("woff2"), url("../libs/font-awesome/fonts/fontawesome-webfont.woff?v=4.5.0") format("woff"), url("../libs/font-awesome/fonts/fontawesome-webfont.ttf?v=4.5.0") format("truetype"), url("../libs/font-awesome/fonts/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+.rif-book {
+  -webkit-box-shadow: 25px 25px 50px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 25px 25px 50px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  background: url(../images/rif-book.png) no-repeat 0 0;
+  height: 60px;
+  margin: 0 auto 30px;
+  width: 60px; }
+  @media (min-width: 992px) {
+    .rif-book {
+      left: 50%;
+      margin: 0 0 0 -30px;
+      position: absolute;
+      top: 0;
+      z-index: 10; } }
+
 @font-face {
   font-family: 'FontAwesome';
   src: url("../libs/font-awesome/fonts/fontawesome-webfont.eot?v=4.5.0");
@@ -775,6 +1011,10 @@ footer .logo-nav {
 
 .home-hero:after {
   clear: both; }
+
+@media (min-width: 992px) {
+  .home-hero .rif-book {
+    margin-top: 100px; } }
 
 .home-hero .wrapper {
   position: relative;
@@ -905,3 +1145,62 @@ footer .logo-nav {
         content: ""; }
       .social-media-list li a.facebook:before {
         content: ""; }
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../libs/font-awesome/fonts/fontawesome-webfont.eot?v=4.5.0");
+  src: url("../libs/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.5.0") format("embedded-opentype"), url("../libs/font-awesome/fonts/fontawesome-webfont.woff2?v=4.5.0") format("woff2"), url("../libs/font-awesome/fonts/fontawesome-webfont.woff?v=4.5.0") format("woff"), url("../libs/font-awesome/fonts/fontawesome-webfont.ttf?v=4.5.0") format("truetype"), url("../libs/font-awesome/fonts/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+.text-image-video-hero .wrapper {
+  color: #ffffff;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 30px; }
+  .text-image-video-hero .wrapper h1, .text-image-video-hero .wrapper h2, .text-image-video-hero .wrapper h3, .text-image-video-hero .wrapper h4, .text-image-video-hero .wrapper h5, .text-image-video-hero .wrapper p {
+    color: #ffffff; }
+  @media (min-width: 992px) {
+    .text-image-video-hero .wrapper {
+      float: left;
+      width: 66.66667%; } }
+  @media (min-width: 992px) {
+    .text-image-video-hero .wrapper {
+      margin-left: 16.66667%; } }
+  @media (min-width: 992px) {
+    .text-image-video-hero .wrapper .clearfix {
+      align-items: center;
+      display: flex; } }
+  .text-image-video-hero .wrapper .left,
+  .text-image-video-hero .wrapper .right {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px; }
+    @media (min-width: 992px) {
+      .text-image-video-hero .wrapper .left,
+      .text-image-video-hero .wrapper .right {
+        float: left;
+        width: 50%; } }
+  .text-image-video-hero .wrapper .left {
+    padding: 60px 30px; }
+  .text-image-video-hero .wrapper .right .img-wrapper img {
+    -webkit-box-shadow: 25px 25px 50px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 25px 25px 50px 0 rgba(0, 0, 0, 0.2); }
+    @media (max-width: 991px) {
+      .text-image-video-hero .wrapper .right .img-wrapper img {
+        margin: 0 auto 60px; } }
+  @media (min-width: 992px) {
+    .text-image-video-hero .wrapper .right .img-wrapper {
+      width: 120%; } }
+  @media (min-width: 1200px) {
+    .text-image-video-hero .wrapper .right .img-wrapper {
+      width: 150%; } }
+  .text-image-video-hero .wrapper h1 {
+    line-height: 36px;
+    margin: 20px 0;
+    text-align: left; }
+  .text-image-video-hero .wrapper p {
+    margin: 0; }

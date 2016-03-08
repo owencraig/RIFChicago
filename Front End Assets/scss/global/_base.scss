@@ -34,6 +34,13 @@
     margin-right: -15px;
 }
 
+.clearfix {
+    @include clearfix;
+}
+
+img {
+    @include img-responsive;
+}
 
 body {
     @include font-poppins-normal;
@@ -46,25 +53,6 @@ body {
 .page-content {
     min-height: 100px;
     position: relative;
-    //move up to sit under nav, next to logo
-    @media #{$media-desktop-view} {
-        top: -140px;
-    }
-}
-
-.rif-book {
-    background: url(../images/rif-book.png) no-repeat 0 0;
-    height: 60px;
-    margin: 0 auto $v-spacing-sm;
-    width: 60px;
-
-    @media #{$media-desktop-view} {
-        left: 50%;
-        margin:0 0 0 -30px;
-        position: absolute;
-        top: 0;
-        z-index: 10;
-    }
 }
 
 /* reset header margins */
@@ -107,7 +95,10 @@ strong,
     @include font-poppins-medium;
 }
 
-
+// MODULES
+.module {
+    position: relative;
+}
 
 // COLOR OVERLAYS & CIRCLES
 .circle-img {
@@ -151,6 +142,10 @@ strong,
     }
 }
 
+// BACKGROUNDS
+.bg-blue {
+    background: $light-blue;
+}
 
 // INPUTS
 .rif-form {
@@ -173,12 +168,12 @@ strong,
         &:-ms-input-placeholder,
         &:-moz-placeholder {
             color: $black;
-            opacity: 1; 
+            opacity: 1;
         }
 
         @media #{$media-mobile-view} {
-            display:block;
-            width:100%;
+            display: block;
+            width: 100%;
         }
     }
 }

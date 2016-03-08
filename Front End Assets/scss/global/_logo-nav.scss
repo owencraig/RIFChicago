@@ -5,6 +5,7 @@
     @include make-row;
     margin-bottom: $v-spacing-sm;
     margin-top: $v-spacing-sm;
+    position:relative;
 
     @media #{$media-desktop-view} {
         margin-top: 10px;
@@ -12,7 +13,14 @@
 
     .logo {
         @include make-xs-column(4);
-        @include make-md-column(3);
+        @include make-md-column(2);
+        @include make-lg-column(3);
+
+        @media #{$media-desktop-view} {
+            left:0;
+            position:absolute;
+            top:0;
+        }
 
         a {
             display: block;
@@ -32,9 +40,9 @@
         }
     }
 
-    nav {
-        @include make-xs-column(8);
-        @include make-md-column(9);
+    nav {   
+        @include make-sm-column(8);
+        @include make-md-column(12);
     }
 
     @media #{$media-xxs} {

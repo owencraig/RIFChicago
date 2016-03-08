@@ -3,17 +3,23 @@
 
 .main-navigation {
 
+    @media #{$media-desktop-view} {
+        text-align: center;
+    }
+
     ul {
         @include clearfix;
         @include remove-list-style;
         margin-top: $v-spacing-xs;
 
         @media #{$media-desktop-view} {
+            display: inline-block;
             margin-top: 35px;
+            text-align: center;
 
             li {
-                float: left;
-                margin-right: 50px;
+                display: inline-block;
+                margin: 0 25px;
             }
         }
 

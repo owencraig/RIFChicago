@@ -1,0 +1,26 @@
+﻿@import "../variables";
+@import "../mixins";
+@import "../../libs/bootstrap/stylesheets/bootstrap/modals";
+
+.modal-header {
+    .close {
+        display: inline-block;
+
+        &:before {
+            @include font-awesome;
+            color: $light-green;
+            content: $fa-var-times-circle;
+            font-size: 20px;
+        }
+
+        @media #{$media-desktop-view} {
+            &:hover {
+                cursor: pointer;
+
+                &:before {
+                    color: $gray-light;
+                }
+            }
+        }
+    }
+}

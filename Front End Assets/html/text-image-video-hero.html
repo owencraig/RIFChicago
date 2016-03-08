@@ -27,14 +27,60 @@
 </div></header>
 
         <div class="page-content">
-             
+            
 
-<h1>This is the home page</h1>
-<h2>It's really just a test</h2>
-<h3>Of everything</h3>
-<h4>Stuff</h4>
-<h5>Other stuff</h5>
-<p>This is a paragraph. This is a paragraph. </p>
+<div class="text-image-video-hero module">
+
+    <div class="rif-book"></div>
+
+    <div class="row">
+        <div class="wrapper">
+            <!-- changing classes here can change background color: need to determine choices here -->
+            <div class="bg-blue">
+                <div class="clearfix">
+                    <div class="left">
+                        <h5>Our Mission</h5>
+                        <h1>For At Risk Kids, Literacy Brings Hope.</h1>
+                        <p>When you give books to children, magic happens. Eyes sparkle, smiles emerge, and new possibilities come to light for the first time. Our mission is to inspire a life-changing love of learning through reading. We do this by providing a choice of new, high-quality, and culturally relevant books to kids who need them the most.</p>
+                    </div>
+                    <div class="right">
+                        
+                        <!-- they could place a video (modal) or an image here -->
+
+                        <!-- if image:
+                        <div class="img-wrapper">
+                            <img src="../images/cms/text-image-hero.jpg"/>
+                        </div>
+                        --> 
+
+                        <!-- if video: -->
+                        <div class="img-wrapper video-thumb"> 
+                            <img src="../images/cms/text-image-hero.jpg"/>
+                            <i class="play" data-toggle="modal" data-target="#videoModal"></i>
+                        </div><!-- /.video-thumb -->
+                        <!-- VIDEO IS IN A MODAL: needs guid id in case there is more than one per page (and see above data-target, needs to match) -->
+                        <div id="videoModal" class="modal video" tabindex="-1" role="dialog">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <span class="close" data-dismiss="modal" aria-label="Close"></span>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="responsive-iframe">
+    <iframe src="https://www.youtube.com/embed/tLt5rBfNucc" frameborder="0" allowfullscreen></iframe>
+</div>
+                                    </div>
+                                </div><!-- /.modal-content -->
+                            </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+
+
+                    </div><!-- /.right -->
+                </div><!-- /.clearfix -->
+            </div><!-- /bg -->
+        </div><!-- /.wrapper -->
+    </div><!-- /.row -->
+</div><!-- /.text-image-video-hero -->
 
 
         </div>
