@@ -1,0 +1,18 @@
+﻿@import "../variables";
+@import "../mixins";
+
+.two-equal-col { 
+    @include make-row; 
+
+    > div {
+        @include make-md-column(6);
+
+        @media #{$media-mobile-view} {
+            margin-top:$v-spacing-sm;
+
+            &:first-child {
+                margin-top:0;
+            }
+        }
+    }
+}

@@ -4,7 +4,7 @@ $font-poppins: 'Poppins', sans-serif;
 
 @mixin font-poppins-normal {
     font-family: $font-poppins;
-    font-weight: 300;
+    font-weight: 400; 
 }
 
 @mixin font-poppins-light {

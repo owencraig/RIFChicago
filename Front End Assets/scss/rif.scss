@@ -10,14 +10,16 @@
 @import 'global/videos';  
  
 /* layouts */
-/*@import 'layouts/';*/ 
+@import 'layouts/two-equal-col'; 
+@import 'layouts/three-equal-col'; 
 
 /* modules */
 @import 'modules/rif-book'; 
 @import 'modules/home-hero';
 @import 'modules/social-media-list'; 
 @import 'modules/text-image-video-hero';    
-
+@import 'modules/timeline'; 
+@import 'modules/three-column-callout'; 
 
 
   

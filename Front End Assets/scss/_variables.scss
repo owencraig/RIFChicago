@@ -23,7 +23,6 @@ $v-spacing-lg: 60px;
 $grid-gutter-width-half: ($grid-gutter-width / 2);
 $grid-gutter-width-double: ($grid-gutter-width * 2);
 
-
 // MEDIA QUERIES
 $media-mobile-view: "(max-width: #{$screen-sm-max})";
 $media-desktop-view: "(min-width: #{$screen-md-min})";
@@ -34,3 +33,7 @@ $media-sm-min: "(min-width: #{$screen-sm-min})";
 $media-md-max: "(max-width: #{$screen-md-max})";
 $media-md-min: "(min-width: #{$screen-md-min})";
 $media-lg-min: "(min-width: #{$screen-lg-min})";
+
+//BORDER RADIUS
+$default-border-radius: 5px;
+$circle-border-radius: 50%;

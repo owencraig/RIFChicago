@@ -1,0 +1,13 @@
+images sizes by module:
+
+- home hero: circles sizes: 120px x 120px, 140px x 140px, 180px x 180px (globally)
+
+- text/image/video hero: large image 460px x 300px (for image or video thumb)
+
+- timeline: collage of images (left to right) 
+      210px x 200px (purple)
+      162px x 162px (orange)
+      295px x 215px (white)
+      165px x 200px (blue)
+      305px x 215px (green)  
+ 

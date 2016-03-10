@@ -1,0 +1,46 @@
+﻿@import "../variables";
+@import "../mixins";
+
+.three-column-callout {
+
+    .column-container {
+        @include make-md-column(10);
+        @include make-md-column-offset(1);
+
+        @media #{$media-mobile-view} {
+            padding: 0 $grid-gutter-width;
+        }
+    }
+
+    .three-equal-col {
+        @media #{$media-desktop-view} {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+
+            > div {
+                margin: 0 30px;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        > div {
+            @include color-text($white);
+            background: $light-blue;
+            border-radius: $default-border-radius;
+            padding: $grid-gutter-width-half 10px;
+            text-align: center;
+
+            h2, p {
+                margin: 0 0 15px;
+            }
+        }
+    }
+}

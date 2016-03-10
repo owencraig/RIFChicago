@@ -1,27 +1,31 @@
 ﻿@import 'variables';
 @import 'fonts';
 @import "../libs/bootstrap/stylesheets/bootstrap/mixins";
-@import "../libs/font-awesome/scss/_variables.scss"; 
-
-
-@mixin remove-list-style() {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
+@import "../libs/font-awesome/scss/_variables.scss";
 
 
 // HEADERS AND TEXT STYLES
 @mixin h1 {
-    @include font-poppins-light;   
+    @include font-poppins-light;
     color: $light-blue;
     letter-spacing: 2px;
-    text-align:center;
+    text-align: center;
     text-transform: uppercase;
 
     @media #{$media-desktop-view} {
         font-size: 30px;
         line-height: 42px;
+    }
+}
+
+@mixin h2 {
+    @include font-poppins-medium;
+    color: $black;
+    letter-spacing: 2px;
+
+    @media #{$media-desktop-view} {
+        font-size: 24px;
+        line-height: 30px;
     }
 }
 
@@ -39,7 +43,7 @@
 
     @media #{$media-desktop-view} {
         font-size: 14px;
-        line-height: 18px;
+        line-height: 24px;
     }
 }
 
@@ -67,16 +71,21 @@
 }
 
 
-// COLOR TYPE 
-
+// COLOR TYPE
 @mixin color-text($color) {
-    color:$color;
+    color: $color;
 
-    h1,h2,h3,h4,h5,p {
-        color:$color;
+    h1, h2, h3, h4, h5, p {
+        color: $color;
     }
 }
 
+//LISTS
+@mixin remove-list-style() {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
 // LINKS & BUTTONS
 @mixin link-transition() {
@@ -85,8 +94,11 @@
 
 @mixin button-rounded() {
     @include link-transition;
-    border-radius: 5px;
+    border-radius: $default-border-radius;
+    display:inline-block;
     padding: 13px 17px;
+    text-decoration:none;
+    text-transform:uppercase;
 }
 
 @mixin button-green() {
@@ -119,26 +131,11 @@
     background-size: cover;
 }
 
-// BOX SHADOWS
-@mixin box-shadow() {
-    -webkit-box-shadow: 25px 25px 50px 0 rgba(0,0,0,.2);
-    box-shadow: 25px 25px 50px 0 rgba(0,0,0,.2);
-}
-
-// CIRCLES
-@mixin circle() {
-    border-radius: 50%;
-}
-
-// CIRCLES WITH COLOR OVERLAY
-@mixin circle-img($color) {
-    @include box-shadow;
-    @include circle; 
-    display: inline-block; 
+// IMAGE WITH OVERLAY
+@mixin img-overlay($color) {
     position: relative;
 
     &:after {
-        @include circle;
         background: $color;
         content: "";
         display: block;
@@ -150,9 +147,37 @@
     }
 
     img {
-        @include circle;
         display: block;
         filter: grayscale(1);
         -webkit-filter: grayscale(1);
     }
 }
+
+// BOX SHADOWS
+@mixin box-shadow() {
+    -webkit-box-shadow: 25px 25px 50px 0 rgba(0,0,0,.2);
+    box-shadow: 25px 25px 50px 0 rgba(0,0,0,.2);
+}
+
+// CIRCLES
+@mixin circle() {
+    border-radius: $circle-border-radius;
+}
+
+// CIRCLES WITH COLOR OVERLAY
+@mixin circle-img($color) {
+    @include box-shadow;
+    @include circle;
+    @include img-overlay($color);
+    display: inline-block; 
+
+    &:after {
+        @include circle;
+    }
+
+    img {
+        @include circle;
+    }
+} 
+
+

@@ -95,6 +95,32 @@ strong,
     @include font-poppins-medium;
 }
 
+.intro-copy {
+    @include make-row;
+    margin-bottom:$v-spacing-sm;
+
+    > div {
+        @include make-md-column(8); 
+        @include make-md-column-offset(2);
+        @include h4;
+        text-align:center;
+
+        p {
+            @include h4;
+            margin-bottom:0;
+        }
+    }
+}
+
+// LINKS
+.btn {
+    @include button-rounded;
+}
+
+.btn.green {
+    @include button-green;
+}
+
 // MODULES
 .module {
     position: relative;
@@ -139,6 +165,29 @@ strong,
 
     &.purple {
         @include circle-img($overlay-purple);
+    }
+}
+
+// IMAGE OVERLAYS
+.img-overlay {
+    &.orange {
+        @include img-overlay($overlay-orange);
+    }
+
+    &.blue { 
+        @include img-overlay($overlay-blue); 
+    }
+
+    &.green {
+        @include img-overlay($overlay-green);
+    }
+
+    &.white {
+        @include img-overlay($overlay-white);
+    }
+
+    &.purple {
+        @include img-overlay($overlay-purple);
     }
 }
 
