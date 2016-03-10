@@ -1,0 +1,18 @@
+{
+  "name": "rif",
+  "version": "1.0.0",
+  "description": "Rif Chicago",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-nunjucks-render": "^2.0.0",
+    "gulp-sass": "^2.2.0",
+    "nunjucks": "^2.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "command"
+  },
+  "author": "",
+  "license": "ISC"
+}
