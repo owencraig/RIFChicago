@@ -216,6 +216,20 @@ th {
     .container {
       width: 1170px; } }
 
+@media (min-width: 992px) {
+  .small-container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding: 0;
+    width: 83.33333333%; }
+    .small-container:before, .small-container:after {
+      content: " ";
+      display: table; }
+    .small-container:after {
+      clear: both; } }
+
 .row {
   margin-left: -15px;
   margin-right: -15px; }
@@ -1167,6 +1181,10 @@ footer .logo-nav {
     display: table; }
   .three-equal-col:after {
     clear: both; }
+  @media (min-width: 992px) {
+    .three-equal-col {
+      display: flex;
+      justify-content: space-between; } }
   .three-equal-col > div {
     position: relative;
     min-height: 1px;
@@ -1175,7 +1193,7 @@ footer .logo-nav {
     @media (min-width: 992px) {
       .three-equal-col > div {
         float: left;
-        width: 33.33333%; } }
+        width: 25%; } }
     @media (max-width: 991px) {
       .three-equal-col > div {
         margin-top: 30px; }
@@ -1491,33 +1509,10 @@ h1.rif-book-margin-top {
   font-weight: normal;
   font-style: normal; }
 
-.three-column-callout .column-container {
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px; }
-  @media (min-width: 992px) {
-    .three-column-callout .column-container {
-      float: left;
-      width: 83.33333%; } }
-  @media (min-width: 992px) {
-    .three-column-callout .column-container {
-      margin-left: 8.33333%; } }
-  @media (max-width: 991px) {
-    .three-column-callout .column-container {
-      padding: 0 30px; } }
-
-@media (min-width: 992px) {
+@media (max-width: 991px) {
   .three-column-callout .three-equal-col {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center; }
-    .three-column-callout .three-equal-col > div {
-      margin: 0 30px; }
-      .three-column-callout .three-equal-col > div:first-child {
-        margin-left: 0; }
-      .three-column-callout .three-equal-col > div:last-child {
-        margin-right: 0; } }
+    margin-left: 0;
+    margin-right: 0; } }
 
 .three-column-callout .three-equal-col > div {
   color: #ffffff;

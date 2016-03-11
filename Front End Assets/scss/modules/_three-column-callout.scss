@@ -2,33 +2,10 @@
 @import "../mixins";
 
 .three-column-callout {
-
-    .column-container {
-        @include make-md-column(10);
-        @include make-md-column-offset(1);
-
-        @media #{$media-mobile-view} {
-            padding: 0 $grid-gutter-width;
-        }
-    }
-
     .three-equal-col {
-        @media #{$media-desktop-view} {
-            display: flex;
-            flex-wrap: nowrap;
-            justify-content: center;
-
-            > div {
-                margin: 0 30px;
-
-                &:first-child {
-                    margin-left: 0;
-                }
-
-                &:last-child {
-                    margin-right: 0;
-                }
-            }
+        @media #{$media-mobile-view} {
+            margin-left: 0;
+            margin-right: 0;
         }
 
         > div {

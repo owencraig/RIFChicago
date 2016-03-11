@@ -28,6 +28,14 @@
     }
 }
 
+.small-container {  
+    @media #{$media-desktop-view} {
+        @include container-fixed;
+        padding:0;
+        width:83.33333333%;
+    }
+} 
+
 .row {
     @include clearfix;
     margin-left: -15px;
