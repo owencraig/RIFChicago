@@ -1,0 +1,22 @@
+﻿@import "../variables";
+@import "../mixins";
+
+.text-left-image-right {
+ 
+    .content {
+        @include make-md-column-offset(2);
+        @include make-md-column(4);
+    }
+
+    .image {
+        @include make-md-column(5);
+    }
+
+    > .row {
+        @media #{$media-desktop-view} {
+            align-items: center;
+            display: flex;
+        }
+    }
+
+}

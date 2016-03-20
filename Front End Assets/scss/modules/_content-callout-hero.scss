@@ -1,0 +1,44 @@
+﻿@import "../variables";
+@import "../mixins";
+
+.content-callout-hero {
+
+    .image-wrapper {
+        @include make-md-column-offset(1);
+        @include make-md-column(10);
+
+        @media #{$media-mobile-view} {
+            margin-bottom: $v-spacing-sm;
+        }
+    }
+
+    .content {
+        @media #{$media-desktop-view} {
+            align-content: center;
+            display: flex;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+
+            > .row {
+                align-items: center;
+                display: flex;
+            }
+        }
+
+        .content-wrapper {
+            @include make-md-column-offset(6);
+            @include make-md-column(4);
+
+            @media #{$media-desktop-view} {
+                @include color-text($white);
+            }
+        }
+    }
+
+    h3 {
+        margin-bottom: $v-spacing-xs;
+    }
+}

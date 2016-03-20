@@ -1,12 +1,11 @@
 {% extends "shell.html" %}
 
-{% block content %} 
+{% block content %}
 
-<h1>This is the home page</h1>
-<h2>It's really just a test</h2>
-<h3>Of everything</h3>
-<h4>Stuff</h4>
-<h5>Other stuff</h5>
-<p>This is a paragraph. This is a paragraph. </p>
+{% include "partials/page-modules/home-hero.html" %}
+{% include "partials/page-modules/text-image-video-hero.html" %}
+{% include "partials/page-modules/timeline.html" %}
+{% include "partials/page-modules/three-column-callout.html" %}
+{% include "partials/page-modules/three-column-image.html" %}
 
 {% endblock %}  

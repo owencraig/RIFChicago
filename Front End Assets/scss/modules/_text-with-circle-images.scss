@@ -1,0 +1,32 @@
+﻿@import "../variables";
+@import "../mixins";
+
+.text-with-circle-images {
+    
+    .images {
+        @include make-md-column-offset(2);
+        @include make-md-column(4);
+        text-align:center;
+
+        @media #{$media-mobile-view} {
+            margin-bottom:$v-spacing-sm;
+        }
+    }
+
+    .content {
+        @include make-md-column(4);
+    }
+
+    h3 {
+        margin-bottom:15px;
+    }
+
+    .circle-img.small {
+        @media #{$media-desktop-view} {
+            left:0;
+            position:absolute;
+            top:-120px;
+        }        
+    }
+
+}
