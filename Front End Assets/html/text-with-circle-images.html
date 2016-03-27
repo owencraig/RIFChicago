@@ -10,21 +10,30 @@
     <title>RIF Dev</title>
 </head>
 <body>
-    <div class="container page-wrapper">
 
-        <header><div class="logo-nav">
-    <div class="logo">
-        <a href="/"><img src="../images/rif-logo.png"/></a>
+    <header><div class="container">
+    <div class="logo-nav">
+        <div class="logo">
+            <a href="/">
+                <img src="../images/rif-logo.png" class="desktop" />
+                <img src="../images/rif-logo-mobile.png" class="mobile" />
+            </a>
+        </div>
+        <div class="mobile-nav-toggle">
+            <span></span>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="#" title="Programs and Initiatives">Programs and Initiatives</a></li>
+                <li><a href="#" title="Get Involved">Get Involved</a></li>
+                <li><a href="#" title="About Us">About Us</a></li>
+                <li class="button"><a href="#" title="Donate">Donate</a></li>
+            </ul>
+        </nav>
     </div>
-    <nav class="main-navigation">
-        <ul>
-            <li><a href="#" title="Programs and Initiatives">Programs and Initiatives</a></li>
-            <li><a href="#" title="Get Involved">Get Involved</a></li>
-            <li><a href="#" title="About Us">About Us</a></li>
-            <li class="button"><a href="#" title="Donate">Donate</a></li>
-        </ul>
-    </nav>
 </div></header>
+
+    <div class="container page-wrapper">
 
         <div class="page-content">
             
@@ -56,23 +65,6 @@
     </div><!--/.row -->
 </div><!-- /.text-with-circle-images -->
 
-        </div>
-
-        <!-- top footer, repeat of header with background image -->
-        <div class="footer-nav-wrapper" style="background-image: url('../images/CMS/footer-bg.jpg')">
-            <footer><div class="logo-nav">
-    <div class="logo">
-        <a href="/"><img src="../images/rif-logo.png"/></a>
-    </div>
-    <nav class="main-navigation">
-        <ul>
-            <li><a href="#" title="Programs and Initiatives">Programs and Initiatives</a></li>
-            <li><a href="#" title="Get Involved">Get Involved</a></li>
-            <li><a href="#" title="About Us">About Us</a></li>
-            <li class="button"><a href="#" title="Donate">Donate</a></li>
-        </ul>
-    </nav>
-</div></footer>
         </div>
 
         <!-- bottom footer -->
@@ -126,6 +118,8 @@
 
     <script src="../libs/jquery/jquery-1.12.1.min.js"></script>
     <script src="../libs/bootstrap/javascripts/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <script data-main="../scripts/rif-main" src="../scripts/require.js"></script>
 </body>
 </html>

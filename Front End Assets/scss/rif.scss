@@ -10,20 +10,23 @@
 @import 'global/videos';  
  
 /* layouts */
-@import 'layouts/two-equal-col'; 
-@import 'layouts/three-equal-col'; 
+@import 'layouts/two-equal-col';  
+@import 'layouts/three-equal-col';  
 
 /* modules */
 @import 'modules/rif-book'; 
 @import 'modules/home-hero';
-@import 'modules/social-media-list'; 
-@import 'modules/text-image-video-hero';    
+@import 'modules/social-media-list';  
+@import 'modules/text-image-video-hero'; 
+@import 'modules/large-text-image-video-hero';   
 @import 'modules/timeline'; 
 @import 'modules/three-column-callout'; 
 @import 'modules/three-column-image'; 
 @import 'modules/text-with-circle-images'; 
 @import 'modules/text-left-image-right'; 
-@import 'modules/content-callout-hero'; 
-
+@import 'modules/content-callout-hero';  
+@import 'modules/three-column-circle-image-text';  
+@import 'modules/donation-page-tabs'; 
+ 
 
   

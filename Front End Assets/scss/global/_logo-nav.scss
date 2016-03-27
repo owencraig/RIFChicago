@@ -1,14 +1,39 @@
 ﻿@import "../variables";
 @import "../mixins";
 
-.logo-nav { 
+.logo-nav {
     @include make-row;
-    margin-bottom: $v-spacing-sm;
-    margin-top: $v-spacing-sm;
-    position:relative;
+    background: $white;
+    padding: $v-spacing-xs 0;
+    position: relative;
+
+    @media #{$media-mobile-view} {
+        align-items: center;
+        display: flex;
+    }
 
     @media #{$media-desktop-view} {
-        margin-top: 10px;
+        padding: $v-spacing-sm 0;
+    }
+
+    .mobile-nav-toggle {
+        @include make-xs-column(8);
+        text-align: right;
+
+        span {
+            display: inline-block;
+
+            &:after {
+                @include font-awesome;
+                color: $green;
+                content: $fa-var-bars;
+                font-size: 35px;
+            }
+        }
+
+        @media #{$media-desktop-view} {
+            display: none;
+        }
     }
 
     .logo {
@@ -17,13 +42,20 @@
         @include make-lg-column(3);
 
         @media #{$media-desktop-view} {
-            left:0;
-            position:absolute;
-            top:0;
+            left: 0;
+            position: absolute;
+            top: 15px;
         }
 
         a {
-            display: block;
+            display: inline-block;
+
+            @media #{$media-desktop-view} {
+                @include circle;
+                @include box-shadow;
+                background: $white;
+                padding: 10px;
+            }
 
             @media #{$media-md-min} {
                 margin-left: -10px;
@@ -37,25 +69,38 @@
                 margin: auto;
                 max-height: 150px;
             }
+
+            &.desktop {
+                @media #{$media-mobile-view} {
+                    display: none;
+                }
+            }
+
+            &.mobile {
+                @media #{$media-desktop-view} {
+                    display: none;
+                }
+            }
         }
     }
 
-    nav {   
+    nav {
         @include make-sm-column(8);
         @include make-md-column(12);
-    }
 
-    @media #{$media-xxs} {
-        .logo,
-        nav {
-            float: none;
-            text-align: center;
-            width: 100%;
+        @media #{$media-desktop-view} {
+            display: block !important;
         }
 
-        .logo {
-            margin-bottom: $v-spacing-sm;
+        @media #{$media-mobile-view} {
+            background: $white;
+            display: none;
+            left: 0;
+            position: absolute;
+            text-align:right;
+            top: 100%;
+            width: 100%;
+            z-index: 10;
         }
     }
 }
-
