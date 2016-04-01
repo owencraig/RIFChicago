@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-var nunjucksRender = require('gulp-nunjucks-render');
+var nunjucksRender = require('gulp-nunjucks-render'),
+    ghPages = require('gulp-gh-pages');
 
 // compile the main scss
 gulp.task('sass', function () {
@@ -31,6 +32,11 @@ gulp.task('watch', function () {
     gulp.watch('html/pages/*.html', ['nunjucks']);
     gulp.watch('html/partials/*.html', ['nunjucks']);
     gulp.watch('html/templates/*.html', ['nunjucks']); 
+});
+
+gulp.task('deploy',['sass','nunjucks'], function(){
+    return gulp.src('./html/**/*')
+    .pipe(ghPages());
 });
 
 // default tasks
