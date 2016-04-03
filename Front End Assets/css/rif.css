@@ -1971,3 +1971,35 @@ h1.rif-book-margin-top {
 
 .other-amount .cash {
   margin-left: 40px; }
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../libs/font-awesome/fonts/fontawesome-webfont.eot?v=4.5.0");
+  src: url("../libs/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.5.0") format("embedded-opentype"), url("../libs/font-awesome/fonts/fontawesome-webfont.woff2?v=4.5.0") format("woff2"), url("../libs/font-awesome/fonts/fontawesome-webfont.woff?v=4.5.0") format("woff"), url("../libs/font-awesome/fonts/fontawesome-webfont.ttf?v=4.5.0") format("truetype"), url("../libs/font-awesome/fonts/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@media (min-width: 992px) {
+  .programs-grid .three-equal-col {
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: flex-start; } }
+
+@media (min-width: 992px) {
+  .programs-grid .three-equal-col > div {
+    display: flex;
+    margin-bottom: 30px;
+    width: 33.3333333333333%; } }
+
+.programs-grid .three-equal-col > div > .border {
+  border: 2px solid #9aedd8;
+  border-radius: 5px;
+  padding: 30px;
+  position: relative;
+  text-align: center; }
+  .programs-grid .three-equal-col > div > .border h3, .programs-grid .three-equal-col > div > .border p {
+    margin: 15px 0; }
+  .programs-grid .three-equal-col > div > .border img {
+    -webkit-box-shadow: 25px 25px 50px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 25px 25px 50px 0 rgba(0, 0, 0, 0.2); }
