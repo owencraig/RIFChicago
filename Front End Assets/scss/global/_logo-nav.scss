@@ -3,7 +3,6 @@
 
 .logo-nav {
     @include make-row;
-    background: $white;
     padding: $v-spacing-xs 0;
     position: relative;
 
@@ -51,9 +50,6 @@
             display: inline-block;
 
             @media #{$media-desktop-view} {
-                @include circle;
-                @include box-shadow;
-                background: $white;
                 padding: 10px;
             }
 

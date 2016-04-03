@@ -12,9 +12,9 @@ gulp.task('sass', function () {
 
 //compile the html
 gulp.task('nunjucks', function () {
-    return gulp.src(['html/pages/*.html', 'html/modules/*.html'])  
+    return gulp.src(['html/pages/*.html'])   
     .pipe(nunjucksRender({
-        path: ['html/pages/', 'html/templates/', 'html/modules/'] 
+        path: ['html/pages/', 'html/templates/'] 
     }))
     .pipe(gulp.dest('html'));
 });
