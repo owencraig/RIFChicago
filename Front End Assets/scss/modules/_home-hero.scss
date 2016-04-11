@@ -6,7 +6,23 @@
 
     .rif-book {
         @media #{$media-desktop-view} {
-            margin-top:100px;
+            margin-top: 100px;
+        }
+    }
+
+    .mobile-donate {
+
+        @media #{$media-mobile-view} {
+            .btn {
+                display: block;
+                margin: $v-spacing-sm auto;
+                text-align: center;
+                width: 100%;
+            }
+        }
+
+        @media #{$media-desktop-view} {
+            display: none;
         }
     }
 
@@ -19,7 +35,7 @@
         @include make-md-column-offset(2);
 
         @media #{$media-mobile-view} {
-            text-align: center;
+            display:none;
         }
     }
 
@@ -70,7 +86,7 @@
 
             > span {
                 position: relative;
-                 
+
                 > span {
                     @include font-poppins-medium;
                     font-size: 18px;
@@ -82,7 +98,7 @@
                 }
 
                 @media #{$media-mobile-view} {
-                    display:block;
+                    display: block;
                     margin-top: $v-spacing-xs;
                 }
 

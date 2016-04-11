@@ -10,11 +10,9 @@
     ul {
         @include clearfix;
         @include remove-list-style;
-        margin-top: $v-spacing-xs;
 
         @media #{$media-desktop-view} {
             display: inline-block;
-            margin-top: 35px;
             text-align: center;
 
             li {

@@ -1,0 +1,15 @@
+﻿@import "../variables";
+@import "../mixins";
+
+.three-column-circle-image-text {
+    text-align: center;
+
+    .circle-img {
+        display: block;
+        margin: 0 auto $v-spacing-sm;
+    }
+
+    h3 {
+        margin-bottom: $v-spacing-xs;
+    }
+}

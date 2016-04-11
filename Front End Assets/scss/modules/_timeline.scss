@@ -3,18 +3,39 @@
 
 .timeline {
 
+    .timeline-wrapper {
+        > .row {
+            @media #{$media-mobile-view} {
+                display: flex;
+            }
+        }
+    }
+
+    .year-container {
+        @include make-xs-column(3);
+        @include make-md-column(10);
+        @include make-md-column-offset(1);
+
+        @media #{$media-mobile-view} {
+            border-right: 3px solid $light-grey;
+            display: flex;
+
+            .two-equal-col {
+                display: flex;
+                -ms-flex-direction: column;
+                -webkit-flex-direction: column;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+        }
+    }
+
     .top {
         @include h5;
 
         .right {
-            text-align: right;
-        }
-
-        &.two-equal-col > div {
-            @include make-xs-column(6);
-
-            &.right {
-                margin-top: 0;
+            @media #{$media-desktop-view} {
+                text-align: right;
             }
         }
     }
@@ -25,13 +46,23 @@
         display: block;
         height: 3px;
         margin-bottom: $v-spacing-sm;
+
+        @media #{$media-mobile-view} {
+            display: none;
+        }
     }
 
     .bottom {
+        @include make-xs-column(9);
+        @include make-md-column(12);
         text-align: center;
 
         h3 {
             @include h1;
+
+            @media #{$media-mobile-view} {
+                margin-bottom: $v-spacing-xs;
+            }
         }
     }
 
@@ -43,12 +74,23 @@
         position: relative;
 
 
+        .img-overlay {
+            @media #{$media-mobile-view} {
+                display:none;
+
+                &:last-child {
+                    display:block;
+                }
+            }
+        }
+
         .img-overlay.square {
 
             @media #{$media-desktop-view} {
                 bottom: 0;
                 left: 130px;
                 position: absolute;
+                z-index:1;
             }
 
             @media #{$media-lg-min} {

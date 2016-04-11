@@ -1,0 +1,105 @@
+﻿@import "../variables";
+@import "../mixins";
+
+.col-md-4 {
+    @include make-md-column(4);
+}
+
+.col-md-4 a {
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding: 15px 0;
+    text-decoration: none;
+}
+ 
+#tabs {
+    border: none;
+    width: 552px;
+    margin: 0 auto;
+    font-family: "Poppins", sans-serif;
+}
+
+.ui-tabs {
+    padding: 0;
+}
+
+.ui-tabs .ui-tabs-nav {
+    padding: 0;
+}
+
+.ui-tabs .ui-tabs-panel {
+    border: 2px solid #9ef2d8;
+    border-top: none;
+    padding: 35px 15px 30px 15px;
+}
+
+.ui-tabs .ui-tabs-panel .col-md-4 a {
+    border: 2px solid #9ef2d8;
+    border-radius: 5px;
+}
+
+.ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+    padding: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    outline: 0;
+    font-size: 12px;
+}
+
+.ui-widget-header {
+    border: 0;
+    background: none;
+}
+
+.ui-tabs .ui-tabs-nav li {
+    margin: 0;
+    border-bottom: 2px solid #9ef2d8;
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+    border: 2px solid #9ef2d8;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    border: none;
+    background: none;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-active {
+    border: 2px solid #9ef2d8;
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.donate-button {
+    text-align: center;
+}
+
+.donate-button .give {
+    @include button-rounded();
+    @include button-green();
+}
+
+.other-amount {
+    border: 2px solid #9ef2d8;
+    border-radius: 5px;
+    margin: 15px;
+    margin-bottom: 25px;
+    text-align: center;
+    padding: 15px;
+}
+  
+.other-amount input {
+    margin: 0 auto;
+    border: none;
+    font-family: "Poppins", sans-serif;
+    margin-left: 30px;
+    outline: 0;
+    font-size: 18px;
+}
+
+.other-amount .cash {
+    margin-left: 40px;
+}

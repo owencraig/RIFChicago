@@ -3,7 +3,7 @@
 
 .footer-nav-wrapper {
     @include background-cover-inline(center, center);
-    margin:$v-spacing-sm 0 $v-spacing-xs;
+    margin: $v-spacing-sm 0 $v-spacing-xs;
     padding-top: $v-spacing-xs;
 
     @media #{$media-desktop-view} {
@@ -17,14 +17,14 @@ footer {
             li {
                 a {
                     color: $white;
-                } 
+                }
             }
         }
-    }  
+    }
 
     .logo-nav {
-        margin-bottom:0;
-        margin-top:0;
+        margin-bottom: 0;
+        margin-top: 0;
     }
 }
 
@@ -54,11 +54,7 @@ footer {
         @include make-lg-column(4);
 
         @media #{$media-mobile-view} {
-            margin-top: $v-spacing-sm;
-
-            p:last-child {
-                margin-bottom: 0;
-            }
+            display: none;
         }
 
         @media #{$media-desktop-view} {
@@ -83,7 +79,10 @@ footer {
     }
 
     .footer-navigation {
-        margin: $v-spacing-sm 0;
+
+        @media #{$media-mobile-view} {
+            display: none;
+        }
 
         @media #{$media-desktop-view} {
             margin: $v-spacing-xs 0;
@@ -132,6 +131,8 @@ footer {
         }
 
         @media #{$media-mobile-view} {
+            margin-top:$v-spacing-xs;
+
             span, ul {
                 display: block;
             }
@@ -141,15 +142,10 @@ footer {
             @include remove-list-style;
 
             li {
-                display: block;
-
-                @media #{$media-desktop-view} {
-                    display: inline-block;
-                    margin-right: 10px;
-                    vertical-align: middle;
-                }
+                display: inline-block;
+                margin-right: 10px;
+                vertical-align: middle;
             }
         }
     }
 }
-  

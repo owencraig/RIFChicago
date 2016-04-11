@@ -5,25 +5,22 @@
     <meta name="viewport" content="width=device-width" />
 
     <link href='https://fonts.googleapis.com/css?family=Poppins:400,500,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css"> 
     <link href="../css/rif.css" rel="stylesheet" />
 
     <title>RIF Dev</title>
 </head>
 <body>
-    <div class="container page-wrapper">
 
-        <header>{% include "partials/logo-nav.html" %}</header>
+    <header>{% include "partials/logo-nav.html" %}</header>
+
+    <div class="container page-wrapper">
 
         <div class="page-content">
             {% block content %}
             <!-- start module markup here-->
             <!-- end module markup here-->
             {% endblock %}
-        </div>
-
-        <!-- top footer, repeat of header with background image -->
-        <div class="footer-nav-wrapper" style="background-image: url('../images/CMS/footer-bg.jpg')">
-            <footer>{% include "partials/logo-nav.html" %}</footer>
         </div>
 
         <!-- bottom footer -->
@@ -33,6 +30,7 @@
 
     <script src="../libs/jquery/jquery-1.12.1.min.js"></script>
     <script src="../libs/bootstrap/javascripts/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <script data-main="../scripts/rif-main" src="../scripts/require.js"></script>
 </body>
 </html>

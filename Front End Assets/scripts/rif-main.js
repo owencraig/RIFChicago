@@ -1,2 +1,6 @@
+
+requirejs(["helpers/utilities"]);
 requirejs(["pages/home"]);
-requirejs(["helpers/utilities"]); 
+requirejs(["modules/logo-nav"]); 
+requirejs(["modules/donation-page-tabs"]);
+ 

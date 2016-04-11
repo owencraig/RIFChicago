@@ -5,83 +5,86 @@
     <meta name="viewport" content="width=device-width" />
 
     <link href='https://fonts.googleapis.com/css?family=Poppins:400,500,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css"> 
     <link href="../css/rif.css" rel="stylesheet" />
 
     <title>RIF Dev</title>
 </head>
 <body>
-    <div class="container page-wrapper">
 
-        <header><div class="logo-nav">
-    <div class="logo">
-        <a href="/"><img src="../images/rif-logo.png"/></a>
+    <header><div class="container">
+    <div class="logo-nav">
+        <div class="logo">
+            <a href="/">
+                <img src="../images/rif-logo.png" class="desktop" />
+                <img src="../images/rif-logo-mobile.png" class="mobile" />
+            </a>
+        </div>
+        <div class="mobile-nav-toggle">
+            <span></span>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="#" title="Programs and Initiatives">Programs and Initiatives</a></li>
+                <li><a href="#" title="Get Involved">Get Involved</a></li>
+                <li><a href="#" title="About Us">About Us</a></li>
+                <li class="button"><a href="#" title="Donate">Donate</a></li>
+            </ul>
+        </nav>
     </div>
-    <nav class="main-navigation">
-        <ul>
-            <li><a href="#" title="Programs and Initiatives">Programs and Initiatives</a></li>
-            <li><a href="#" title="Get Involved">Get Involved</a></li>
-            <li><a href="#" title="About Us">About Us</a></li>
-            <li class="button"><a href="#" title="Donate">Donate</a></li>
-        </ul>
-    </nav>
 </div></header>
+
+    <div class="container page-wrapper">
 
         <div class="page-content">
             
 
-<div class="text-image-video-hero module">
+<div class="large-text-image-video-hero text-image-video-hero module">
 
-    <div class="rif-book"></div> 
+    <div class="rif-book"></div>
 
     <div class="row">
-        <div class="wrapper">
+        <div class="large wrapper">
+
             <!-- changing classes here can change background color: need to determine choices here -->
-            <div class="bg-blue">
-                <div class="clearfix">
-                    <div class="left">
-                        <h5>Our Mission</h5>
-                        <h1>For At Risk Kids, Literacy Brings Hope.</h1>
-                        <p>When you give books to children, magic happens. Eyes sparkle, smiles emerge, and new possibilities come to light for the first time. Our mission is to inspire a life-changing love of learning through reading. We do this by providing a choice of new, high-quality, and culturally relevant books to kids who need them the most.</p>
-                    </div>
-                    <div class="right">
-                        
-                        <!-- they could place a video (modal) or an image here -->
+            <div class="left">
+                <div class="bg-blue">
+                    <h1>Community</h1>
+                    <p>Donsed odio dui. Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis.</p>
+                </div>
+            </div>
+            <div class="right">
 
-                        <!-- if image:
-                        <div class="img-wrapper">
-                            <img src="../images/cms/text-image-hero.jpg"/>
-                        </div>
-                        --> 
-
-                        <!-- if video: -->
-                        <div class="img-wrapper video-thumb"> 
-                            <img src="../images/cms/text-image-hero.jpg"/>
-                            <i class="play" data-toggle="modal" data-target="#videoModal"></i>
-                        </div><!-- /.video-thumb -->
-                        <!-- VIDEO IS IN A MODAL: needs guid id in case there is more than one per page (and see above data-target, needs to match) -->
-                        <div id="videoModal" class="modal video" tabindex="-1" role="dialog">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <span class="close" data-dismiss="modal" aria-label="Close"></span>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div class="responsive-iframe">
+                <!-- they could place a video (modal) or an image here -->
+                <!-- if image:
+                <div class="img-wrapper">
+                    <img src="../images/cms/text-image-hero.jpg"/>
+                </div>
+                -->
+                <!-- if video: -->
+                <div class="img-wrapper video-thumb">
+                    <img src="../images/cms/lg-text-image-hero.jpg" />
+                    <i class="play" data-toggle="modal" data-target="#videoModal"></i>
+                </div><!-- /.video-thumb -->
+                <!-- VIDEO IS IN A MODAL: needs guid id in case there is more than one per page (and see above data-target, needs to match) -->
+                <div id="videoModal" class="modal video" tabindex="-1" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <span class="close" data-dismiss="modal" aria-label="Close"></span>
+                            </div>
+                            <div class="modal-body">
+                                <div class="responsive-iframe">
     <iframe src="https://www.youtube.com/embed/tLt5rBfNucc" frameborder="0" allowfullscreen></iframe>
 </div>
-                                    </div>
-                                </div><!-- /.modal-content -->
-                            </div><!-- /.modal-dialog -->
-                        </div><!-- /.modal -->
-
-
-                    </div><!-- /.right -->
-                </div><!-- /.clearfix -->
-            </div><!-- /bg -->
+                            </div>
+                        </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+            </div><!-- /.right -->
         </div><!-- /.wrapper -->
     </div><!-- /.row -->
-</div><!-- /.text-image-video-hero -->
-
+</div><!-- /.large-text-image-video-hero -->
 <div class="text-with-circle-images module">
 
     <div class="row">
@@ -141,7 +144,7 @@
         </div>       
     </div><!-- /.content -->
 </div><!-- /.content-callout-hero -->
-
+ 
 <div class="text-with-circle-images module">
 
     <div class="row">
@@ -166,23 +169,6 @@
 
 
 
-        </div>
-
-        <!-- top footer, repeat of header with background image -->
-        <div class="footer-nav-wrapper" style="background-image: url('../images/CMS/footer-bg.jpg')">
-            <footer><div class="logo-nav">
-    <div class="logo">
-        <a href="/"><img src="../images/rif-logo.png"/></a>
-    </div>
-    <nav class="main-navigation">
-        <ul>
-            <li><a href="#" title="Programs and Initiatives">Programs and Initiatives</a></li>
-            <li><a href="#" title="Get Involved">Get Involved</a></li>
-            <li><a href="#" title="About Us">About Us</a></li>
-            <li class="button"><a href="#" title="Donate">Donate</a></li>
-        </ul>
-    </nav>
-</div></footer>
         </div>
 
         <!-- bottom footer -->
@@ -236,6 +222,7 @@
 
     <script src="../libs/jquery/jquery-1.12.1.min.js"></script>
     <script src="../libs/bootstrap/javascripts/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <script data-main="../scripts/rif-main" src="../scripts/require.js"></script>
 </body>
 </html>
