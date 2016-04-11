@@ -10,7 +10,12 @@
     "gulp-sass": "^2.2.0",
     "nunjucks": "^2.4.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "gulp-clean": "^0.3.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "run-sequence": "^1.1.5"
+  },
   "scripts": {
     "test": "command"
   },

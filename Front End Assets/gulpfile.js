@@ -1,14 +1,20 @@
-gulp = require('gulp'),
-sass = require('gulp-sass'),
-nunjucksRender = require('gulp-nunjucks-render'),
-ghPages = require('gulp-gh-pages');
+var gulp = require('gulp'),
+    sass = require('gulp-sass'),
+    nunjucksRender = require('gulp-nunjucks-render'),
+    ghPages = require('gulp-gh-pages'),
+    replace = require('gulp-replace'),
+    rename = require('gulp-rename'),
+    clean = require('gulp-clean'),
+    runSequence = require('run-sequence');
+
+var distFolder = '../dist'
 
 // compile the main scss
 gulp.task('sass', function () {
     return gulp.src('scss/rif.scss')
         .pipe(sass())
         .on('error', swallowError) 
-        .pipe(gulp.dest('css')); 
+        .pipe(gulp.dest(distFolder + '/css')); 
 });
 
 //compile the html
@@ -18,7 +24,26 @@ gulp.task('nunjucks', function () {
             path: ['html/pages/', 'html/templates/']
         }))
         .on('error', swallowError)
-        .pipe(gulp.dest('html')); 
+        .pipe(replace(/\.\.\//g,''))
+        .pipe(rename(function(file){
+            var result = file;
+            if(file.basename === 'home'){
+                file.basename = 'index';
+            }
+            
+            return file;
+        }))
+        .pipe(gulp.dest(distFolder)); 
+});
+
+gulp.task('copy', function() {
+    return gulp.src('{images,scripts,libs}/**')
+        .pipe(gulp.dest(distFolder))
+})
+
+gulp.task('clean', function(){
+    return gulp.src(distFolder, {read: false})
+        .pipe(clean({force: true}));
 });
 
 // prevents gulp from bombing out
@@ -40,9 +65,15 @@ gulp.task('watch', function () {
     gulp.watch('html/templates/partials/*.html', ['nunjucks']);
 });
 
-gulp.task('deploy',['sass','nunjucks'], function(){
-    return gulp.src('./html/**/*')
+gulp.task('doDeploy', function(){
+    
+    return gulp.src(distFolder + '/**/*')
     .pipe(ghPages());
+});
+
+gulp.task('deploy', function(){
+    
+    return runSequence('clean', ['sass','nunjucks','copy'], 'doDeploy');
 });
 
 // default tasks
