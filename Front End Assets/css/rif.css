@@ -610,6 +610,9 @@ strong,
 .bg-blue {
   background: #72c2e6; }
 
+.bg-orange {
+  background: #ffaa33; }
+
 .rif-form input[type=text] {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
@@ -2003,3 +2006,181 @@ h1.rif-book-margin-top {
   .programs-grid .three-equal-col > div > .border img {
     -webkit-box-shadow: 25px 25px 50px 0 rgba(0, 0, 0, 0.2);
     box-shadow: 25px 25px 50px 0 rgba(0, 0, 0, 0.2); }
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../libs/font-awesome/fonts/fontawesome-webfont.eot?v=4.5.0");
+  src: url("../libs/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.5.0") format("embedded-opentype"), url("../libs/font-awesome/fonts/fontawesome-webfont.woff2?v=4.5.0") format("woff2"), url("../libs/font-awesome/fonts/fontawesome-webfont.woff?v=4.5.0") format("woff"), url("../libs/font-awesome/fonts/fontawesome-webfont.ttf?v=4.5.0") format("truetype"), url("../libs/font-awesome/fonts/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+.image-video-text-hero .wrapper {
+  color: #ffffff;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 30px; }
+  .image-video-text-hero .wrapper h1, .image-video-text-hero .wrapper h2, .image-video-text-hero .wrapper h3, .image-video-text-hero .wrapper h4, .image-video-text-hero .wrapper h5, .image-video-text-hero .wrapper p {
+    color: #ffffff; }
+  @media (min-width: 992px) {
+    .image-video-text-hero .wrapper {
+      float: left;
+      width: 66.66667%; } }
+  @media (min-width: 992px) {
+    .image-video-text-hero .wrapper {
+      margin-left: 16.66667%; } }
+  @media (min-width: 992px) {
+    .image-video-text-hero .wrapper .clearfix {
+      align-items: center;
+      display: flex; } }
+  .image-video-text-hero .wrapper .left,
+  .image-video-text-hero .wrapper .right {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px; }
+    @media (min-width: 992px) {
+      .image-video-text-hero .wrapper .left,
+      .image-video-text-hero .wrapper .right {
+        float: left;
+        width: 50%; } }
+  .image-video-text-hero .wrapper .right {
+    /*padding: $v-spacing-lg $v-spacing-sm;*/ }
+  .image-video-text-hero .wrapper .left .img-wrapper img {
+    -webkit-box-shadow: 25px 25px 50px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 25px 25px 50px 0 rgba(0, 0, 0, 0.2); }
+    @media (max-width: 991px) {
+      .image-video-text-hero .wrapper .left .img-wrapper img {
+        margin: 0 auto 60px; } }
+  @media (min-width: 992px) {
+    .image-video-text-hero .wrapper .left .img-wrapper {
+      width: 120%; } }
+  @media (min-width: 1200px) {
+    .image-video-text-hero .wrapper .left .img-wrapper {
+      width: 150%; } }
+  .image-video-text-hero .wrapper h1 {
+    line-height: 36px;
+    margin: 20px 0;
+    text-align: left; }
+  .image-video-text-hero .wrapper p {
+    margin: 0; }
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../libs/font-awesome/fonts/fontawesome-webfont.eot?v=4.5.0");
+  src: url("../libs/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.5.0") format("embedded-opentype"), url("../libs/font-awesome/fonts/fontawesome-webfont.woff2?v=4.5.0") format("woff2"), url("../libs/font-awesome/fonts/fontawesome-webfont.woff?v=4.5.0") format("woff"), url("../libs/font-awesome/fonts/fontawesome-webfont.ttf?v=4.5.0") format("truetype"), url("../libs/font-awesome/fonts/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+.large-image-video-text-hero .wrapper.large {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px; }
+  @media (min-width: 992px) {
+    .large-image-video-text-hero .wrapper.large {
+      float: left;
+      width: 100%; } }
+  @media (min-width: 992px) {
+    .large-image-video-text-hero .wrapper.large {
+      margin-left: 0%; } }
+  @media (min-width: 992px) {
+    .large-image-video-text-hero .wrapper.large {
+      align-items: center;
+      display: flex; } }
+  .large-image-video-text-hero .wrapper.large .right {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    /*@include make-md-column-offset(1);*/
+    padding-bottom: 0;
+    padding-top: 0; }
+    @media (min-width: 992px) {
+      .large-image-video-text-hero .wrapper.large .right {
+        float: left;
+        width: 33.33333%; } }
+    @media (min-width: 992px) {
+      .large-image-video-text-hero .wrapper.large .right {
+        margin-right: -60px;
+        padding-right: 0;
+        z-index: 1; } }
+    .large-image-video-text-hero .wrapper.large .right > div {
+      padding: 30px; }
+      @media (min-width: 992px) {
+        .large-image-video-text-hero .wrapper.large .right > div {
+          padding: 60px 30px; } }
+      .large-image-video-text-hero .wrapper.large .right > div h1 {
+        margin-top: 0; }
+  .large-image-video-text-hero .wrapper.large .left {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px; }
+    @media (min-width: 992px) {
+      .large-image-video-text-hero .wrapper.large .left {
+        float: left;
+        width: 58.33333%; } }
+    .large-image-video-text-hero .wrapper.large .left .img-wrapper {
+      width: 100%; }
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../libs/font-awesome/fonts/fontawesome-webfont.eot?v=4.5.0");
+  src: url("../libs/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.5.0") format("embedded-opentype"), url("../libs/font-awesome/fonts/fontawesome-webfont.woff2?v=4.5.0") format("woff2"), url("../libs/font-awesome/fonts/fontawesome-webfont.woff?v=4.5.0") format("woff"), url("../libs/font-awesome/fonts/fontawesome-webfont.ttf?v=4.5.0") format("truetype"), url("../libs/font-awesome/fonts/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+.gallery-filter-wrapper {
+  margin: 30px; }
+  @media (min-width: 992px) {
+    .gallery-filter-wrapper {
+      align-items: center;
+      display: flex;
+      justify-content: center; } }
+  @media (min-width: 992px) {
+    .gallery-filter-wrapper .contest-filter {
+      align-items: center;
+      display: flex;
+      justify-content: center; } }
+  .gallery-filter-wrapper .contest-filter > span {
+    position: relative; }
+    @media (max-width: 991px) {
+      .gallery-filter-wrapper .contest-filter > span {
+        display: block;
+        margin-top: 15px; } }
+    @media (min-width: 992px) {
+      .gallery-filter-wrapper .contest-filter > span {
+        display: inline-block;
+        margin-left: 15px; } }
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../libs/font-awesome/fonts/fontawesome-webfont.eot?v=4.5.0");
+  src: url("../libs/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.5.0") format("embedded-opentype"), url("../libs/font-awesome/fonts/fontawesome-webfont.woff2?v=4.5.0") format("woff2"), url("../libs/font-awesome/fonts/fontawesome-webfont.woff?v=4.5.0") format("woff"), url("../libs/font-awesome/fonts/fontawesome-webfont.ttf?v=4.5.0") format("truetype"), url("../libs/font-awesome/fonts/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+.circle-text {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  color: #fff;
+  padding: 40px 10px 10px 30px;
+  position: relative;
+  display: inline-block;
+  margin: 20px; }
+  .circle-text .header {
+    text-transform: uppercase;
+    font-weight: bold; }
+  .circle-text .description {
+    font-size: 11px;
+    margin-left: -10px; }
+  .circle-text a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    position: absolute;
+    font-weight: bold;
+    bottom: 35px; }

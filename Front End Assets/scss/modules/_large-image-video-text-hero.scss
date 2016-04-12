@@ -1,0 +1,48 @@
+﻿@import "../variables";
+@import "../mixins";
+
+.large-image-video-text-hero {
+
+    .wrapper.large {
+        @include make-md-column(12);
+        @include make-md-column-offset(0);
+
+        @media #{$media-desktop-view} {
+            align-items: center;
+            display: flex;
+        }
+
+        .right {
+            @include make-md-column(4);
+            /*@include make-md-column-offset(1);*/
+            padding-bottom: 0;
+            padding-top: 0;
+
+            @media #{$media-desktop-view} {
+                margin-right: - $grid-gutter-width-double;
+                padding-right: 0;
+                z-index: 1;
+            }
+
+            > div {
+                padding: $v-spacing-sm;
+
+                @media #{$media-desktop-view} {
+                    padding: $v-spacing-lg $v-spacing-sm;
+                }
+
+                h1 {
+                    margin-top: 0;
+                }
+            }
+        }
+
+        .left {
+            @include make-md-column(7);
+
+            .img-wrapper {
+                width: 100%;
+            }
+        }
+    }
+}
