@@ -3,14 +3,13 @@
 
 .circle-text
 {
-    width:200px;
-    height:200px;
-    border-radius:100px;
+    width:300px;
+    height:300px;
+    border-radius:150px;
     color:#fff;    
-    padding:40px 10px 10px 30px;
+    padding:70px 10px 10px 40px;
     position:relative;
-    display:inline-block;
-    margin:20px;
+    margin:auto;
     
     .header{
         text-transform: uppercase;
@@ -18,8 +17,9 @@
     }
     
     .description{
-        font-size: 11px;
+        font-size: 13px;
         margin-left:-10px;
+        margin-top:10px
     }
     
     a {
@@ -28,6 +28,8 @@
         text-transform: uppercase;
         position:absolute;
         font-weight:bold;
-        bottom:35px;
+        bottom:45px;
+        text-align: left;
+        padding-left: 10px;
     }
 }
