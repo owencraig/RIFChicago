@@ -5,7 +5,8 @@ var gulp = require('gulp'),
     replace = require('gulp-replace'),
     rename = require('gulp-rename'),
     clean = require('gulp-clean'),
-    runSequence = require('run-sequence');
+    runSequence = require('run-sequence'),
+    server = require('gulp-server-livereload');
 
 var distFolder = '../dist'
 
@@ -63,6 +64,9 @@ gulp.task('watch', function () {
     gulp.watch('html/pages/*.html', ['nunjucks']);
     gulp.watch('html/templates/*.html', ['nunjucks']);
     gulp.watch('html/templates/partials/*.html', ['nunjucks']);
+    
+    // images etc
+    gulp.watch('{images,scripts,libs}/**', ['copy']);
 });
 
 gulp.task('doDeploy', function(){
@@ -76,5 +80,15 @@ gulp.task('deploy', function(){
     return runSequence('clean', ['sass','nunjucks','copy'], 'doDeploy');
 });
 
+gulp.task('server', function(){
+  gulp.src(distFolder)
+    .pipe(server({
+      livereload: true,
+      directoryListing: false,
+      open: true
+    }));
+});
 // default tasks
-gulp.task('default', ['watch']);     
+gulp.task('default', function(){
+    return runSequence('clean', ['sass','nunjucks','copy'], ['server','watch']);
+});     
