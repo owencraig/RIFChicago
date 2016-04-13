@@ -1,0 +1,47 @@
+<div class="large-image-video-text-hero image-video-text-hero module">
+
+    {% include "partials/rif-book.html" %}
+
+    <div class="row">
+        <div class="large wrapper">
+
+            <!-- changing classes here can change background color: need to determine choices here -->
+            <div class="left">
+
+                <!-- they could place a video (modal) or an image here -->
+                <!-- if image:-->
+                <div class="img-wrapper">
+                    <img src="../images/cms/lg-text-image-hero.jpg"/>
+                </div>
+                
+                <!-- if video: 
+                <div class="img-wrapper video-thumb">
+                    <img src="../images/cms/lg-text-image-hero.jpg" />
+                    <i class="play" data-toggle="modal" data-target="#videoModal"></i>
+                </div><!-- /.video-thumb - ->
+                <!-- VIDEO IS IN A MODAL: needs guid id in case there is more than one per page (and see above data-target, needs to match) - ->
+                <div id="videoModal" class="modal video" tabindex="-1" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <span class="close" data-dismiss="modal" aria-label="Close"></span>
+                            </div>
+                            <div class="modal-body">
+                                {% include "partials/responsive-iframe.html" %}
+                            </div>
+                        </div><!-- /.modal-content - ->
+                    </div><!-- /.modal-dialog - ->
+                </div><!-- /.modal <- -></- ->
+                -->
+            </div>
+            <div class="right">
+                <div class="bg-orange">
+                    <h1>Contests</h1>
+                    <p>Donsed odio dui. Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis.</p>
+                </div>
+            </div><!-- /.right -->
+        </div><!-- /.wrapper -->
+    </div><!-- /.row -->
+</div><!-- /.large-image-video-text-hero -->
+
+

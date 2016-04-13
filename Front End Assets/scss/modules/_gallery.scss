@@ -1,0 +1,35 @@
+@import "../variables";
+@import "../mixins";      
+      
+.gallery-filter-wrapper{
+        margin: $v-spacing-sm;
+
+        @media #{$media-desktop-view} {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .contest-filter {
+            @media #{$media-desktop-view} {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            > span {
+                position: relative;
+
+
+                @media #{$media-mobile-view} {
+                    display: block;
+                    margin-top: $v-spacing-xs;
+                }
+
+                @media #{$media-desktop-view} {
+                    display: inline-block;
+                    margin-left: $grid-gutter-width-half;
+                }
+            }
+        }
+}
