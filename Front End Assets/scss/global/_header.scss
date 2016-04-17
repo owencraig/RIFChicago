@@ -2,11 +2,21 @@
 @import "../mixins";
 
 
-header {
+header { 
     background:$white; 
     left:0;
     position:fixed;
     top:0;
     width:100%;
     z-index:1000;
+     ß
+
+    @media #{$media-mobile-view} {
+    	height:auto;
+		transition:height: 0.4s ease;
+    	
+    	&.nav-open {
+    		height: 100%;
+    	} 
+    }  
 }

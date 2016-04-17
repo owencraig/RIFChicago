@@ -1,14 +1,17 @@
 ﻿@import "../variables";
 @import "../mixins";
 
-.logo-nav {
+.logo-nav { 
     @include make-row;
-    padding: $v-spacing-xs 0;
+    padding: $v-spacing-xs 0; 
     position: relative;
 
     @media #{$media-mobile-view} {
+        box-shadow: 0 3px 5px 0 rgba(0,0,0,.08);
+        -webkit-box-shadow: 0 3px 5px 0 rgba(0,0,0,.08);
         align-items: center;
         display: flex;
+        padding-left:20px;
     }
 
     @media #{$media-desktop-view} {
@@ -24,7 +27,7 @@
 
             &:after {
                 @include font-awesome;
-                color: $green;
+                color: $light-green;
                 content: $fa-var-bars;
                 font-size: 35px;
             }
@@ -39,6 +42,10 @@
         @include make-xs-column(4);
         @include make-md-column(2);
         @include make-lg-column(3);
+
+        @media #{$media-mobile-view} {
+            padding-left:0;
+        }
 
         @media #{$media-desktop-view} {
             left: 0;
@@ -90,13 +97,37 @@
 
         @media #{$media-mobile-view} {
             background: $white;
-            display: none;
+            height:0;
             left: 0;
+            opacity:0;
+            padding:0;
             position: absolute;
             text-align:right;
             top: 100%;
             width: 100%;
+            visibility:hidden;
             z-index: 10;
+            transition: all 0.4s ease;  
+        }
+    }
+}
+
+@media #{$media-mobile-view} { 
+    .nav-open {
+        .logo-nav { 
+            nav {
+                height:auto;
+                opacity:1;
+                visibility: visible;
+            }
+            .mobile-nav-toggle {
+                span { 
+                    &:after {
+                        content: $fa-var-times;
+                    }
+                }
+
+            } 
         }
     }
 }
