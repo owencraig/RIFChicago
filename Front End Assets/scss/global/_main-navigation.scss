@@ -45,7 +45,6 @@
         }
 
         @media #{$media-mobile-view} {
-            padding-bottom: 50px;
 
             li {
                 border-top: 1px solid $lightest-gray;
@@ -58,8 +57,11 @@
 
                 &.button {
                     a {
+                        color:$white;
                         border-radius: 0; 
                         display:block;
+                        font-size:17px; 
+                        padding:20px; 
                     }
                 }
 

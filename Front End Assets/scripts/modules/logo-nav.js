@@ -3,7 +3,7 @@
 function mobileNavigation() {
     var $mobileNavToggleContainer = $('.mobile-nav-toggle'),
         $mobileNavToggle = $('.mobile-nav-toggle > span'),
-        $siteHeader = $('.site-header');  
+        $siteHeader = $('.site-header');   
 
     //check if we're in mobile
     function isInDesktopView() {

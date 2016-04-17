@@ -7,9 +7,9 @@
     position: relative;
 
     @media #{$media-mobile-view} {
+        align-items: center;
         box-shadow: 0 3px 5px 0 rgba(0,0,0,.08);
         -webkit-box-shadow: 0 3px 5px 0 rgba(0,0,0,.08);
-        align-items: center;
         display: flex;
         padding-left:20px;
     }
@@ -103,7 +103,7 @@
             padding:0;
             position: absolute;
             text-align:right;
-            top: 100%;
+            top: 100px;
             width: 100%;
             visibility:hidden;
             z-index: 10;

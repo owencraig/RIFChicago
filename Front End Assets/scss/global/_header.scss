@@ -8,15 +8,18 @@ header {
     position:fixed;
     top:0;
     width:100%;
-    z-index:1000;
-     ß
+    z-index:1000;  
 
     @media #{$media-mobile-view} {
     	height:auto;
-		transition:height: 0.4s ease;
+		transition:height 0.4s ease; 
     	
     	&.nav-open {
     		height: 100%;
     	} 
+
+        > .container {
+            width:100%; 
+        }
     }  
 }
