@@ -113,5 +113,7 @@
     .donation-note {
         @include font-poppins-medium;
         color: $light-grey;
+        margin:auto;
+        width:65%;
     }
 }

@@ -122,12 +122,31 @@ strong,
 }
 
 // LINKS
+a, 
+a:visited, 
+a:active, 
+&:focus {
+    color:$light-green;
+    text-decoration:none;
+
+    &:hover {
+        color:$green; 
+    }
+}
 .btn {
     @include button-rounded;
 }
 
 .btn.green {
     @include button-green;
+}
+
+.text-cta {
+    &:after {
+        @include font-awesome;
+        content:$fa-var-angle-right;
+        margin-left:5px;
+    }
 }
 
 // MODULES
