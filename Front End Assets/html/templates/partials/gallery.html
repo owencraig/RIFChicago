@@ -9,97 +9,209 @@
         <div class="row">
             <div class="contest-filter rif-form">
                 <span>
-                <input type="text" placeholder="View all Contests" />
+                    <div class="select">
+                        <span class="arr"></span>
+                        <select id="contest-filter">
+                            <option>All Contests</option>
+                            <option>2016 Contest</option>
+                            <option>2015 Contest</option>
+                        </select>
+                    </div>
                 </span>
                 <span>                
-                    <input type="text" placeholder="View By Type" />
+                    <div class="select">
+                        <span class="arr"></span>
+                        <select id="type-filter">
+                            <option >All Types</option>
+                            <option value=".poem">Poems</option>
+                            <option value=".essay">Essays</option>
+                            <option value=".poster">Posters</option>
+                        </select>
+                    </div>
                 </span>
             </div>
         </div>
 
     </div>
-    <!-- /.gallery-wrapper -->
+
     <div class="gallery">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="circle-text bg-blue">
-                    <div class="header">Essay</div>
-                    <div class="description">Donsed odio dui. Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis.</div>
-                    <a href="#">Read story -></a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="circle-text bg-orange">
-                    <div class="header">Essay</div>
-                    <div class="description">Donsed odio dui. Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis.</div>
-                    <a href="#">Read Story -></a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="gallery-image-item">
-                    <a href="#">
-                        <img src="images/CMS/Contests/ReadingIsSnowMuchFun.png" />
-                        <div class="header">Poster</div>
-                        <div class="description">Donsed odio dui. Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis.</div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="gallery-image-item">
-                    <a href="#">
-                        <img src="images/CMS/Contests/control.png" />
-                        <div class="header">Poster</div>
-                        <div class="description">Donsed odio dui. Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis.</div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="circle-text bg-blue">
-                    <div class="header">Essay</div>
-                    <div class="description">Donsed odio dui. Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis.</div>
-                    <a href="#">Read story -></a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="circle-text bg-orange">
-                    <div class="header">Essay</div>
-                    <div class="description">Donsed odio dui. Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis.</div>
-                    <a href="#">Read Story -></a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="circle-text bg-orange">
-                    <div class="header">Essay</div>
-                    <div class="description">Donsed odio dui. Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis.</div>
-                    <a href="#">Read Story -></a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="gallery-image-item">
-                    <a href="#">
-                        <img src="images/CMS/Contests/letsread.png" />
-                        <div class="header">Poster</div>
-                        <div class="description">Donsed odio dui. Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis.</div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="gallery-image-item">
-                    <a href="#">
-                        <img src="images/CMS/Contests/readingissnowmuchfun.png" />
-                        <div class="header">Poster</div>
-                        <div class="description">Donsed odio dui. Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis.</div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="circle-text bg-blue">
-                    <div class="header">Essay</div>
-                    <div class="description">Donsed odio dui. Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis.</div>
-                    <a href="#">Read story -></a>
-                </div>
-            </div>
+    <div class="brick essay">
+        <div class="circle-text bg-blue">
+            <div class="header">Essay</div>
+            <div class="description">Donsed odio dui. Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis.</div>
+            <a href="#">Read story -></a>
+        </div>
+    </div>
+    <div class="brick poem">
+        <div class="circle-text bg-orange">
+            <div class="header">Poem</div>
+            <div class="description">Donsed odio dui. Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis.</div>
+            <a href="#">Read Story -></a>
+        </div>
+    </div>
+    <div class="brick essay">
+        <div class="gallery-image-item">
+            <a href="#">
+                <img src="images/CMS/Contests/ReadingIsSnowMuchFun.png" />
+                <div class="header">Essay</div>
+                <div class="description">Donsed odio dui. Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis.</div>
+            </a>
+        </div>
+    </div>
+    <div class="brick poster">
+        <div class="gallery-image-item">
+            <a href="#">
+                <img src="images/CMS/Contests/control.png" />
+                <div class="header">Poster</div>
+                <div class="description">Donsed odio dui. Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis.</div>
+            </a>
+        </div>
+    </div>
+    <div class="brick essay">
+        <div class="circle-text bg-blue">
+            <div class="header">Essay</div>
+            <div class="description">Donsed odio dui. Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis.</div>
+            <a href="#">Read story -></a>
+        </div>
+    </div>
+    <div class="brick essay">
+        <div class="circle-text bg-orange">
+            <div class="header">Essay</div>
+            <div class="description">Donsed odio dui. Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis.</div>
+            <a href="#">Read Story -></a>
+        </div>
+    </div>
+    <div class="brick poem">
+        <div class="circle-text bg-orange">
+            <div class="header">Poem</div>
+            <div class="description">Donsed odio dui. Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis.</div>
+            <a href="#">Read Story -></a>
+        </div>
+    </div>
+    <div class="brick poem">
+        <div class="gallery-image-item">
+            <a href="#">
+                <img src="images/CMS/Contests/letsread.png" />
+                <div class="header">Poem</div>
+                <div class="description">Donsed odio dui. Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis.</div>
+            </a>
+        </div>
+    </div>
+    <div class="brick poster">
+        <div class="gallery-image-item">
+            <a href="#">
+                <img src="images/CMS/Contests/readingissnowmuchfun.png" />
+                <div class="header">Poster</div>
+                <div class="description">Donsed odio dui. Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis.</div>
+            </a>
+        </div>
+    </div>
+    <div class="brick essay">
+        <div class="circle-text bg-blue">
+            <div class="header">Essay</div>
+            <div class="description">Donsed odio dui. Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis.</div>
+            <a href="#">Read story -></a>
         </div>
     </div>
 </div>
-<!-- /.timeline -->
+
+<style>
+    .brick {
+        width: 300px;
+    }
+    
+    .select {
+  font-size: 14px;
+  position: relative;
+  display: inline-block;
+}
+
+.select select {
+  outline: none;
+  -webkit-appearance: none;
+  display: block;
+  padding: 1.2em 3em 1.2em 1.5em;
+  margin: 0;
+
+  transition: border-color 0.2s;
+  border: 2px solid #9aedd8;
+  border-radius: 5px;
+
+  background: #fff;
+  color: #888;
+  line-height: normal;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.select .arr {
+  background: #fff;
+  bottom: 5px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 5px;
+  pointer-events: none;
+}
+.select .arr:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  margin-top: -5px;
+  pointer-events: none;
+  border-top: 10px solid #888;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+
+.select .arr:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  margin-top: -5px;
+  pointer-events: none;
+  border-top: 6px solid #fff;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+}
+</style>
+<script>
+    $(function() {
+        var wall = new Freewall(".gallery");
+        wall.reset({
+            selector: '.brick',
+            animate: true,
+            cellW: 300, 
+            cellH: 'auto',
+            fixSize: 0,
+            onResize: function() {
+                wall.refresh();
+            }
+        });
+        
+        wall.fitWidth();
+        
+            $('#type-filter').on('change', function() {
+        var filter = this.value ; // or $(this).val()
+        
+        //alert(filter);
+        
+        if (filter) {
+            wall.filter(filter);
+        } else {
+            wall.unFilter();
+        }   
+});
+    });
+            
+    $(".filter-label").click(function() {
+        $(".filter-label").removeClass("active");
+        var filter = $(this).addClass('active').data('filter');
+    });
+    
+
+
+</script>
