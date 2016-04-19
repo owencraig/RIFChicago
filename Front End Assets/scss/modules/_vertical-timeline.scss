@@ -1,0 +1,81 @@
+@import "../variables";
+@import "../mixins";
+
+.vertical-timeline {
+    @include clearfix;
+
+    .wrapper {
+        @include make-md-column(10);
+        @include make-md-column-offset(1);
+    }
+
+    .title-and-text.module {
+        margin-bottom: $v-spacing-sm;
+    }
+
+    .item {
+        @include make-row;
+        padding-bottom: $v-spacing-sm;
+        position: relative;
+
+        .left,
+        .right {
+            @include make-sm-column(6);
+        }
+
+        @media #{$media-xs} {
+            text-align:center; 
+        }
+
+        @media #{$media-sm-min} {
+            .left {
+                padding-right: 50px;
+            }
+
+            .right {
+                padding-left: 50px;
+            }
+        }
+
+        .divider {
+            background: $light-grey;
+            height: 100%;
+            left: 50%;
+            margin-left: -2px;
+            position: absolute;
+            width: 4px;
+
+            @media #{$media-xs} { 
+                display: none;
+            }
+
+            &:before {
+                background: $white;
+                border: 2px solid $light-grey;
+                border-radius: 50%;
+                content: "";
+                display: block;
+                height: 16px;
+                left: 50%;
+                margin-left: -8px;
+                margin-top: -8px;
+                position: absolute;
+                top: 50%;
+                width: 16px;
+            }
+        }
+
+        &.image-item {
+            .left {
+                text-align:center; 
+                @media #{$media-desktop-view} {
+                    text-align: right;
+                }
+            }
+        }
+
+        h3.title {
+            margin-top: $v-spacing-sm;
+        }
+    }
+}
