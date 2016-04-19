@@ -1,0 +1,8 @@
+@import "../variables";
+@import "../mixins";
+
+.title-and-text {
+  h3  {
+    @include h1;
+  }
+}

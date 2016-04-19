@@ -1,9 +1,9 @@
 // main navigation, mobile toggle
 
 function mobileNavigation() {
-    var $mobileNavToggleContainer = $('.mobile-nav-toggle');
-    var $mobileNavToggle = $('.mobile-nav-toggle > span');
-    var $mobileNav = $('nav.main-navigation');
+    var $mobileNavToggleContainer = $('.mobile-nav-toggle'),
+        $mobileNavToggle = $('.mobile-nav-toggle > span'),
+        $siteHeader = $('.site-header');   
 
     //check if we're in mobile
     function isInDesktopView() {
@@ -15,22 +15,19 @@ function mobileNavigation() {
     }
 
     function toggleNav() {
-        $mobileNav.slideToggle();
+        $siteHeader.toggleClass('nav-open');
     }
 
     function navOff() {
-        $mobileNavToggle.off();
-        $mobileNav.hide();
+        $mobileNavToggle.off(); 
     }
 
     if (!isInDesktopView()) {
         $mobileNavToggle.click(function () {
             toggleNav();
         });
-        return false;
     } else {
-        navOff();
-        return true; 
+        navOff(); 
     }
 
 }

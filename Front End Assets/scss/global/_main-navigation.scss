@@ -8,7 +8,7 @@
     }
 
     ul {
-        @include clearfix;
+        @include clearfix; 
         @include remove-list-style;
 
         @media #{$media-desktop-view} {
@@ -17,7 +17,7 @@
 
             li {
                 display: inline-block;
-                margin: 0 25px;
+                margin: 0 15px;
             }
         }
 
@@ -47,13 +47,32 @@
         @media #{$media-mobile-view} {
 
             li {
+                border-top: 1px solid $lightest-gray;
                 display: block;
-                margin-bottom: 15px;
+                text-align:left;
+ 
+                &:first-child {
+                    border-top:0; 
+                }
+
+                &.button {
+                    a {
+                        color:$white;
+                        border-radius: 0; 
+                        display:block;
+                        font-size:17px; 
+                        padding:20px; 
+                    }
+                }
 
                 a {
-                    display: inline-block;
+                    display: block;
+                    font-size:17px; 
+                    padding:20px; 
                 }
             }
         }
     }
 }
+
+

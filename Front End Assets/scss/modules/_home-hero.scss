@@ -17,7 +17,7 @@
                 display: block;
                 margin: $v-spacing-sm auto;
                 text-align: center;
-                width: 100%;
+                width: 60%;
             }
         }
 
@@ -113,5 +113,7 @@
     .donation-note {
         @include font-poppins-medium;
         color: $light-grey;
+        margin:auto;
+        width:65%;
     }
 }
