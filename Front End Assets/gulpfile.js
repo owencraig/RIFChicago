@@ -14,8 +14,8 @@ var distFolder = '../dist'
 gulp.task('sass', function () {
     return gulp.src('scss/rif.scss')
         .pipe(sass())
-        .on('error', swallowError) 
-        .pipe(gulp.dest(distFolder + '/css')); 
+ 
+        .pipe(gulp.dest(distFolder + '/css'));
 });
 
 //compile the html
@@ -24,17 +24,17 @@ gulp.task('nunjucks', function () {
         .pipe(nunjucksRender({
             path: ['html/pages/', 'html/templates/']
         }))
-        .on('error', swallowError)
+
         .pipe(replace(/\.\.\//g,''))
         .pipe(rename(function(file){
             var result = file;
             if(file.basename === 'home'){
                 file.basename = 'index';
             }
-            
+
             return file;
         }))
-        .pipe(gulp.dest(distFolder)); 
+        .pipe(gulp.dest(distFolder));
 });
 
 gulp.task('copy', function() {
@@ -51,10 +51,10 @@ gulp.task('clean', function(){
 function swallowError() {
     this.emit('end');
 }
- 
+
 gulp.task('watch', function () {
 
-    //watch scss files 
+    //watch scss files
     gulp.watch('scss/*.scss', ['sass']);
     gulp.watch('scss/global/*.scss', ['sass']);
     gulp.watch('scss/layouts/*.scss', ['sass']);
@@ -64,19 +64,19 @@ gulp.task('watch', function () {
     gulp.watch('html/pages/*.html', ['nunjucks']);
     gulp.watch('html/templates/*.html', ['nunjucks']);
     gulp.watch('html/templates/partials/*.html', ['nunjucks']);
-    
+
     // images etc
     gulp.watch('{images,scripts,libs}/**', ['copy']);
 });
 
 gulp.task('doDeploy', function(){
-    
+
     return gulp.src(distFolder + '/**/*')
     .pipe(ghPages());
 });
 
 gulp.task('deploy', function(){
-    
+
     return runSequence('clean', ['sass','nunjucks','copy'], 'doDeploy');
 });
 
@@ -91,4 +91,4 @@ gulp.task('server', function(){
 // default tasks
 gulp.task('default', function(){
     return runSequence('clean', ['sass','nunjucks','copy'], ['server','watch']);
-});     
+});

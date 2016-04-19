@@ -104,7 +104,8 @@ strong,
     @include font-poppins-medium;
 }
 
-.intro-copy {
+.intro-copy,
+.copy-block {
     @include make-row;
     margin-bottom: $v-spacing-sm;
 
@@ -113,24 +114,26 @@ strong,
         @include make-md-column-offset(2);
         @include h4;
         text-align: center;
-
-        p {
-            @include h4;
-            margin-bottom: 0;
-        }
     }
 }
 
+.intro-copy {
+  p {
+      @include h4;
+      margin-bottom: 0;
+  }
+}
+
 // LINKS
-a, 
-a:visited, 
-a:active, 
+a,
+a:visited,
+a:active,
 &:focus {
     color:$light-green;
     text-decoration:none;
 
     &:hover {
-        color:$green; 
+        color:$green;
     }
 }
 .btn {

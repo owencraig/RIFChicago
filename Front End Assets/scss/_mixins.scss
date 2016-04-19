@@ -4,7 +4,7 @@
 @import "../libs/font-awesome/scss/_variables.scss";
 
 
-// HEADERS AND TEXT STYLES
+// HEADERS AND TEXT STYLES 
 @mixin h1 {
     @include font-poppins-light;
     color: $light-blue;
@@ -169,7 +169,7 @@
     @include box-shadow;
     @include circle;
     @include img-overlay($color);
-    display: inline-block; 
+    display: inline-block;
 
     &:after {
         @include circle;
@@ -178,6 +178,4 @@
     img {
         @include circle;
     }
-} 
-
-
+}
