@@ -22,7 +22,7 @@
                     <div class="select">
                         <span class="arr"></span>
                         <select id="type-filter">
-                            <option >All Types</option>
+                            <option value="">All Types</option>
                             <option value=".poem">Poems</option>
                             <option value=".essay">Essays</option>
                             <option value=".poster">Posters</option>
@@ -199,7 +199,7 @@
         
         //alert(filter);
         
-        if (filter) {
+        if (filter != "") {
             wall.filter(filter);
         } else {
             wall.unFilter();
@@ -207,10 +207,6 @@
 });
     });
             
-    $(".filter-label").click(function() {
-        $(".filter-label").removeClass("active");
-        var filter = $(this).addClass('active').data('filter');
-    });
     
 
 
