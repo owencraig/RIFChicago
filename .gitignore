@@ -1,3 +1,4 @@
 **/node_modules
 dist
 Front End Assets/.publish
+.DS_Store
