@@ -1,0 +1,19 @@
+@import "../variables";
+@import "../mixins";
+
+.colored-callout-box {
+    @include color-text($white);
+    @include box-shadow; 
+    padding: $v-spacing-sm;
+    text-align: center;
+
+    h3 {
+        margin:0 0 $v-spacing-xs;
+
+        @media #{$media-desktop-view} {
+            margin-left: auto;
+            margin-right:auto; 
+            width: 50%;
+        }
+    }
+}
