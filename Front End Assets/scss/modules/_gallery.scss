@@ -39,10 +39,10 @@
                 
                 .arr {
                     background: #fff;
-                    /*bottom: 5px;
+                    bottom: 5px;
                     position: absolute;
                     right: 5px;
-                    top: 5px;*/
+                    top: 5px;
                     width: 5px;
                     pointer-events: none;
                     
@@ -101,9 +101,22 @@
     .brick {
         width: 300px;
     }
+    
     .gallery-image-item{
         img{
             margin:auto;
+        }
+        
+        
+        .header{
+            margin:10px 0;
+            text-align: center;
+        }
+        
+        .description{
+            margin:10px 0;
+            text-align: center;
+           
         }
     }
 }

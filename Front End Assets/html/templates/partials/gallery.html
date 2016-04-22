@@ -13,8 +13,8 @@
                         <span class="arr"></span>
                         <select id="contest-filter">
                             <option value="">All Contests</option>
-                            <option value=".2016">2016 Contest</option>
-                            <option value=".2015">2015 Contest</option>
+                            <option value="2016">2016 Contest</option>
+                            <option value="2015">2015 Contest</option>
                         </select>
                     </div>
                 </span>
@@ -23,9 +23,9 @@
                         <span class="arr"></span>
                         <select id="type-filter">
                             <option value="">All Types</option>
-                            <option value=".poem">Poems</option>
-                            <option value=".essay">Essays</option>
-                            <option value=".poster">Posters</option>
+                            <option value="poem">Poems</option>
+                            <option value="essay">Essays</option>
+                            <option value="poster">Posters</option>
                         </select>
                     </div>
                 </span>
@@ -42,14 +42,14 @@
                 <a href="#">Read story -></a>
             </div>
         </div>
-        <div class="brick poem 2015">
+        <div class="brick poem 2015" data-contest="2015" data-type="poem">
             <div class="circle-text bg-orange">
                 <div class="header">2015 Poem</div>
                 <div class="description">Donsed odio dui. Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis.</div>
                 <a href="#">Read Story -></a>
             </div>
         </div>
-        <div class="brick essay 2016">
+        <div class="brick essay 2016" data-contest="2016" data-type="essay">
             <div class="gallery-image-item">
                 <a href="#">
                     <img src="images/CMS/Contests/ReadingIsSnowMuchFun.png" />
@@ -58,7 +58,7 @@
                 </a>
             </div>
         </div>
-        <div class="brick poster 2015">
+        <div class="brick poster 2015" data-contest="2015" data-type="poster">
             <div class="gallery-image-item">
                 <a href="#">
                     <img src="images/CMS/Contests/control.png" />
@@ -67,28 +67,28 @@
                 </a>
             </div>
         </div>
-        <div class="brick essay 2016">
+        <div class="brick essay 2016" data-contest="2016" data-type="essay">
             <div class="circle-text bg-blue">
                 <div class="header">2016 Essay</div>
                 <div class="description">Donsed odio dui. Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis.</div>
                 <a href="#">Read story -></a>
             </div>
         </div>
-        <div class="brick essay 2016">
+        <div class="brick essay 2016" data-contest="2016" data-type="essay">
             <div class="circle-text bg-orange">
                 <div class="header">2016 Essay</div>
                 <div class="description">Donsed odio dui. Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis.</div>
                 <a href="#">Read Story -></a>
             </div>
         </div>
-        <div class="brick poem 2015">
+        <div class="brick poem 2015" data-contest="2015" data-type="poem">
             <div class="circle-text bg-orange">
                 <div class="header">2015 Poem</div>
                 <div class="description">Donsed odio dui. Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis.</div>
                 <a href="#">Read Story -></a>
             </div>
         </div>
-        <div class="brick poem 2016">
+        <div class="brick poem 2016" data-contest="2016" data-type="poem">
             <div class="gallery-image-item">
                 <a href="#">
                     <img src="images/CMS/Contests/letsread.png" />
@@ -97,7 +97,7 @@
                 </a>
             </div>
         </div>
-        <div class="brick poster 2016">
+        <div class="brick poster 2016"  data-contest="2016" data-type="poster">
             <div class="gallery-image-item">
                 <a href="#">
                     <img src="images/CMS/Contests/readingissnowmuchfun.png" />
@@ -106,7 +106,7 @@
                 </a>
             </div>
         </div>
-        <div class="brick essay 2015">
+        <div class="brick essay 2015" data-contest="2015" data-type="essay">
             <div class="circle-text bg-blue">
                 <div class="header">2015 Essay</div>
                 <div class="description">Donsed odio dui. Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis.</div>
@@ -134,31 +134,35 @@
         wall.fitWidth();
         
         $('#type-filter').on('change', function() {
-            var typeFilter = this.value ; // or $(this).val()
-            
-            var contestFilter = $("#contest-filter").val();
+            var typeFilter = getFilter("data-type", $(this).val());
+            var contestFilter = getFilter("data-contest", $("#contest-filter").val());
             
             filterFreeWall(typeFilter, contestFilter)
         });
         
         $('#contest-filter').on('change', function() {
-            var contestFilter = this.value ; // or $(this).val()
-            
-            var typeFilter = $("#type-filter").val();
+            var contestFilter = getFilter("data-contest", $(this).val());
+            var typeFilter = getFilter("data-type", $("#type-filter").val());;
             
             filterFreeWall(typeFilter, contestFilter)
         });
         
-        
+
+        function getFilter(key, value){
+            if (value != "" && value != undefined){
+                return "[" + key + "= \"" + value + "\"]";
+            }
+            return "";
+        }   
+             
         function filterFreeWall(typeFilter, contestFilter){
+
             if (typeFilter != "" && typeFilter != undefined) {
                 if (contestFilter !="" && contestFilter != undefined){
-                    typeFilter = typeFilter + " , " + contestFilter;
+                    typeFilter = typeFilter + contestFilter;
                 }
-                alert("Case 1: " + typeFilter);
                 wall.filter(typeFilter);
             } else {
-                alert("Case 2: " + contestFilter);
                 if (contestFilter !="" && contestFilter != undefined){
                     wall.filter(contestFilter);
                 }else{
