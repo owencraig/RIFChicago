@@ -24,6 +24,7 @@
                 @media #{$media-mobile-view} {
                     display: block;
                     margin-top: $v-spacing-xs;
+                    text-align: center; 
                 }
 
                 @media #{$media-desktop-view} {
