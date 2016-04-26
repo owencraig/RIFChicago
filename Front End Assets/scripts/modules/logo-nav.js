@@ -39,3 +39,17 @@ $(function () {
 $(window).resize(function () {
     mobileNavigation();
 });
+
+
+//shrinking the desktop logo when user scrolls down the page
+$(window).scroll(function() {    
+
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 225) {
+        $(".desktop").addClass("desktop-scrolled");
+    }
+    else{
+        $(".desktop").removeClass("desktop-scrolled");
+    }
+});

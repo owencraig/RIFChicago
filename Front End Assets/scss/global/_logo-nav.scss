@@ -1,4 +1,4 @@
-﻿@import "../variables";
+@import "../variables";
 @import "../mixins";
 
 .logo-nav { 
@@ -67,6 +67,7 @@
 
         img {
             @include img-responsive;
+            $logo-transition: all .3s ease;
 
             @media #{$media-xxs} {
                 margin: auto;
@@ -77,6 +78,12 @@
                 @media #{$media-mobile-view} {
                     display: none;
                 }
+            width: 100%;
+            transition: $logo-transition;
+            }
+            &.desktop-scrolled{
+                width: 75px;
+                transition: $logo-transition;
             }
 
             &.mobile {
