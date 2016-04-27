@@ -107,6 +107,10 @@
                     margin-left: $grid-gutter-width-half;
                 }
             }
+
+            > .btn {
+                margin-left: $grid-gutter-width-half;
+            }
         }
     }
 
