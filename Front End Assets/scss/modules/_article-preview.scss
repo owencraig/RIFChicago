@@ -20,11 +20,17 @@
         display: inline;
         float: left;
         width: 66%;
-        padding: 5% 0px 0px 30px;
+        padding: 0px 0px 0px 30px;
         @media #{$media-mobile-view} {
             width: 100%;
             max-width: 100%;
             padding: 10px 0px 0px 0px;
+        }
+        .article-date{
+            margin-bottom: 60px;
+            @media #{$media-mobile-view} {
+                margin-bottom: 0px;
+            }
         }
         .article-headline{
             font-size: 32px;
