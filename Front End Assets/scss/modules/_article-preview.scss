@@ -1,21 +1,52 @@
 .article-container{
     @include clearfix;
     width: 100%;
+    height: auto;
     padding: 20px 0px 20px 0px;
     border-bottom: 1px solid #ccc;
     .article-preview-image{
         width: 33%;
         max-width: 300px;
         float: left;
+        @media #{$media-mobile-view} {
+            float: none;
+            display: block;
+            margin: auto;
+            width: 100%;
+            max-width: 100%;
+        }
     }
     .article-preview-text-container{
         display: inline;
         float: left;
         width: 66%;
-        padding-left: 30px;
+        padding: 0px 0px 0px 30px;
+        @media #{$media-mobile-view} {
+            width: 100%;
+            max-width: 100%;
+            padding: 10px 0px 0px 0px;
+        }
+        .article-date{
+            margin-bottom: 60px;
+            @media #{$media-mobile-view} {
+                margin-bottom: 0px;
+            }
+        }
         .article-headline{
             font-size: 32px;
             color: $black;
+            transition: color .6s ease;
+            &:hover{
+                color: $light-blue;
+                transition: color .3s ease;
+            }
+        }
+        p{
+            color: $black;
+            &:hover{
+                text-decoration: none;
+                color: $black;
+            }
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿@import "../variables";
+@import "../variables";
 @import "../mixins";
 
 .logo-nav { 
@@ -51,7 +51,8 @@
             left: 0;
             position: absolute;
             top: 15px;
-        }
+            z-index:1;
+        } 
 
         a {
             display: inline-block;
@@ -67,6 +68,7 @@
 
         img {
             @include img-responsive;
+            $logo-transition: all .3s ease;
 
             @media #{$media-xxs} {
                 margin: auto;
@@ -77,6 +79,15 @@
                 @media #{$media-mobile-view} {
                     display: none;
                 }
+            width: 100%;
+            transition: $logo-transition;
+            }
+            &.desktop-scrolled{
+                width: 150px;
+                margin-top: -50px;
+                transition: $logo-transition;
+                -webkit-clip-path: circle(25% at 50% 50%);
+                clip-path: circle(25% at 50% 50%);
             }
 
             &.mobile {
