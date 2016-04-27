@@ -42,8 +42,7 @@ $(window).resize(function () {
 
 
 //shrinking the desktop logo when user scrolls down the page
-$(window).scroll(function() {    
-
+$(window).scroll(function() {
     var scroll = $(window).scrollTop();
 
     if (scroll >= 225) {
