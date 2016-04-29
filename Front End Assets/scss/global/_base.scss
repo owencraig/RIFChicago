@@ -1,4 +1,4 @@
-﻿@import "../variables";
+@import "../variables";
 @import "../mixins";
 @import "../../libs/bootstrap/stylesheets/bootstrap/normalize";
 
@@ -280,3 +280,7 @@ a:active,
         }
     }
 }
+
+// HIGHLIGHT COLOR
+::-moz-selection { background: #e90f22; }
+::selection { background: #e90f22; }
