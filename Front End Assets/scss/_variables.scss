@@ -1,4 +1,4 @@
-﻿@import "../libs/bootstrap/stylesheets/bootstrap/variables";
+@import "../libs/bootstrap/stylesheets/bootstrap/variables";
 
 // COLORS
 $black: #231f20; 
@@ -9,6 +9,7 @@ $light-blue: #72c2e6;
 $light-green: #9aedd8;
 $green: #58877b;
 $orange:#ffaa33;
+$purple: #d1afdb;  
 
 // COLOR OVERLAYS
 $overlay-orange: rgba(255,170,51,0.5);
@@ -18,7 +19,7 @@ $overlay-white: rgba(242,242,242,0.5);
 $overlay-purple: rgba(209,175,219,0.5);
 
 // SPACING
-$v-spacing-xs: 15px;
+$v-spacing-xs: 15px; 
 $v-spacing-sm: 30px;
 $v-spacing-lg: 60px;
 $grid-gutter-width-half: ($grid-gutter-width / 2);

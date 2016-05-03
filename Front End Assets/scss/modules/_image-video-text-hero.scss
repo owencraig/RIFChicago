@@ -27,11 +27,16 @@
 
         .left {
             .img-wrapper {
+                
+                    margin-left:70px;
+                    
+                    @media #{$media-mobile-view}{
+                        margin:0 auto;
+                    }
                 img {
                     @include box-shadow;
-
                      @media #{$media-mobile-view} {
-                        margin: 0 auto $v-spacing-lg;
+                        margin: 0 auto ;
                      }
                 }
 

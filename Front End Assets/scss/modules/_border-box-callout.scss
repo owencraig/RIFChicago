@@ -1,0 +1,26 @@
+@import "../variables";
+@import "../mixins";
+
+.border-box-callout {
+    border:1px solid $black; 
+    margin-bottom:$v-spacing-lg; 
+    padding:$v-spacing-sm;
+
+    .title-and-text.module {
+        margin-bottom: $v-spacing-xs; 
+    }
+
+    .inline-buttons {
+        text-align:center; 
+
+        .btn {
+            display:block;
+            margin-bottom: $v-spacing-xs;
+
+            @media #{$media-desktop-view} {
+                display:inline-block; 
+                margin:0 $grid-gutter-width-half; 
+            }
+        }
+    }
+}

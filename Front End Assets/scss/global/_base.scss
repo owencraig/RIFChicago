@@ -1,4 +1,4 @@
-﻿@import "../variables";
+@import "../variables";
 @import "../mixins";
 @import "../../libs/bootstrap/stylesheets/bootstrap/normalize";
 
@@ -237,6 +237,19 @@ a:active,
 .bg-orange {
     background: $orange;
 }
+
+.bg-purple {
+    background:$purple; 
+}
+
+.bg-green {
+    background:$green; 
+} 
+
+.bg-gray {
+    background:$light-grey; 
+}
+
 // INPUTS
 .rif-form {
 
@@ -267,3 +280,7 @@ a:active,
         }
     }
 }
+
+// HIGHLIGHT COLOR
+::-moz-selection { background: #e90f22; }
+::selection { background: #e90f22; }
