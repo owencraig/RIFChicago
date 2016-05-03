@@ -239,15 +239,15 @@ a:active,
 }
 
 .bg-purple {
-    background:$purple; 
+    background:$purple;
 }
 
 .bg-green {
-    background:$green; 
-} 
+    background:$green;
+}
 
 .bg-gray {
-    background:$light-grey; 
+    background:$light-grey;
 }
 
 // INPUTS
@@ -259,7 +259,7 @@ a:active,
         border-radius: 5px;
         color: $black;
         font-size: 14px;
-        padding: 15px 10px;
+        padding: 9px 10px 8px;
         text-align: right;
 
         &:focus {

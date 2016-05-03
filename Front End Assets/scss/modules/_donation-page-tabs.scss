@@ -1,22 +1,27 @@
 ﻿@import "../variables";
 @import "../mixins";
 
-.col-md-4 {
-    @include make-md-column(4);
+.column {
+    @include make-sm-column(4);
 }
 
-.col-md-4 a {
+.column a {
     width: 100%;
     display: block;
     text-align: center;
     padding: 15px 0;
     text-decoration: none;
 }
- 
+
+.content {
+  @media #{$media-desktop-view} {
+      @include make-md-column(8);
+      @include make-md-column-offset(2);
+  }
+}
+
 #tabs {
     border: none;
-    width: 552px;
-    margin: 0 auto;
     font-family: "Poppins", sans-serif;
 }
 
@@ -90,7 +95,7 @@
     text-align: center;
     padding: 15px;
 }
-  
+
 .other-amount input {
     margin: 0 auto;
     border: none;

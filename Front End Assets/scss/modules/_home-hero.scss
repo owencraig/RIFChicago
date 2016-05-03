@@ -71,6 +71,10 @@
     .donation {
         margin: $v-spacing-sm;
 
+        h3 {
+          font-size: 15px; 
+        }
+
         @media #{$media-desktop-view} {
             align-items: center;
             display: flex;
