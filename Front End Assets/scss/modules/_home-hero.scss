@@ -109,7 +109,12 @@
             }
 
             > .btn {
+              @media #{$media-mobile-view} {
+                  margin-top: $v-spacing-xs;
+              }
+              @media #{$media-desktop-view} {
                 margin-left: $grid-gutter-width-half;
+              }
             }
         }
     }
