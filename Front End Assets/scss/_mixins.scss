@@ -4,7 +4,7 @@
 @import "../libs/font-awesome/scss/_variables.scss";
 
 
-// HEADERS AND TEXT STYLES 
+// HEADERS AND TEXT STYLES
 @mixin h1 {
     @include font-poppins-light;
     color: $light-blue;
@@ -96,7 +96,11 @@
     @include link-transition;
     border-radius: $default-border-radius;
     display:inline-block;
-    padding: 13px 17px;
+    font-size: 12px;
+    font-weight: 500; 
+    letter-spacing: 2px;
+    padding: 14px 17px 13px;
+    text-align: center;;
     text-decoration:none;
     text-transform:uppercase;
 }

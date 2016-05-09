@@ -1,0 +1,16 @@
+@import "../variables";
+@import "../mixins";
+
+.free-text-block {
+  @media #{$media-desktop-view} {
+    @include make-row;
+  }
+
+  .content {
+    @media #{$media-desktop-view} {
+        @include make-md-column(8);
+        @include make-md-column-offset(2);
+    }
+  }
+
+}

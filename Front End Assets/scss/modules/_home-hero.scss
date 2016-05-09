@@ -71,6 +71,10 @@
     .donation {
         margin: $v-spacing-sm;
 
+        h3 {
+          font-size: 15px; 
+        }
+
         @media #{$media-desktop-view} {
             align-items: center;
             display: flex;
@@ -109,7 +113,12 @@
             }
 
             > .btn {
+              @media #{$media-mobile-view} {
+                  margin-top: $v-spacing-xs;
+              }
+              @media #{$media-desktop-view} {
                 margin-left: $grid-gutter-width-half;
+              }
             }
         }
     }
