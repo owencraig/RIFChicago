@@ -84,10 +84,13 @@
             }
             &.desktop-scrolled{
                 width: 150px;
-                margin-top: -50px;
+                margin-top: -33px;
                 transition: $logo-transition;
                 -webkit-clip-path: circle(25% at 50% 50%);
                 clip-path: circle(25% at 50% 50%);
+                @media #{$media-lg-min} {
+                    margin-top: -50px;
+                }
             }
 
             &.mobile {
