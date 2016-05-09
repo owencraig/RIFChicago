@@ -76,7 +76,7 @@ gulp.task('doDeploy', function(){
 
 gulp.task('deploy', function(){
 
-    return runSequence('clean', ['sass','nunjucks','copy'], 'doDeploy');
+    return runSequence('build', 'doDeploy');
 });
 
 gulp.task('server', function(){
@@ -89,5 +89,9 @@ gulp.task('server', function(){
 });
 // default tasks
 gulp.task('default', function(){
-    return runSequence('clean', ['sass','nunjucks','copy'], ['server','watch']);
+    return runSequence('build', ['server','watch']);
+});
+
+gulp.task('build', function(){
+    return runSequence('clean', ['sass','nunjucks','copy']);
 });
