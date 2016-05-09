@@ -14,7 +14,6 @@ var distFolder = '../dist'
 gulp.task('sass', function () {
     return gulp.src('scss/rif.scss')
         .pipe(sass())
- 
         .pipe(gulp.dest(distFolder + '/css'));
 });
 
