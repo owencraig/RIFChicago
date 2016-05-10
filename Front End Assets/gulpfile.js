@@ -88,6 +88,7 @@ gulp.task('server', function(){
       open: true
     }));
 });
+
 // default tasks
 gulp.task('default', function(){
     return runSequence('clean', ['sass','nunjucks','copy'], ['server','watch']);
