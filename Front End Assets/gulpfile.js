@@ -14,7 +14,6 @@ var distFolder = '../dist'
 gulp.task('sass', function () {
     return gulp.src('scss/rif.scss')
         .pipe(sass())
- 
         .pipe(gulp.dest(distFolder + '/css'));
 });
 
@@ -77,7 +76,7 @@ gulp.task('doDeploy', function(){
 
 gulp.task('deploy', function(){
 
-    return runSequence('clean', ['sass','nunjucks','copy'], 'doDeploy');
+    return runSequence('build', 'doDeploy');
 });
 
 gulp.task('server', function(){
@@ -91,5 +90,9 @@ gulp.task('server', function(){
 
 // default tasks
 gulp.task('default', function(){
-    return runSequence('clean', ['sass','nunjucks','copy'], ['server','watch']);
+    return runSequence('build', ['server','watch']);
+});
+
+gulp.task('build', function(){
+    return runSequence('clean', ['sass','nunjucks','copy']);
 });
