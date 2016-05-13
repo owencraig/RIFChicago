@@ -170,9 +170,14 @@
 
 // CIRCLES WITH COLOR OVERLAY
 @mixin circle-img($color) {
+    @include circle-img-base;
+    @include img-overlay($color);
+
+}
+
+@mixin circle-img-base() {
     @include box-shadow;
     @include circle;
-    @include img-overlay($color);
     display: inline-block;
 
     &:after {

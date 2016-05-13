@@ -2,7 +2,9 @@
 @import "../mixins";
 
 .text-image-video-hero {
-
+    .media-thumbnail, .media-item header{
+        display:none;
+    }
     .wrapper {
         @include color-text($white);
         @include make-md-column(8);
