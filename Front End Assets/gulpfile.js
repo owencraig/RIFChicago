@@ -9,11 +9,12 @@ var gulp = require('gulp'),
     server = require('gulp-server-livereload');
 
 var distFolder = '../dist'
-
+ 
 // compile the main scss
 gulp.task('sass', function () {
     return gulp.src('scss/rif.scss')
         .pipe(sass())
+        .on('error', swallowError)
         .pipe(gulp.dest(distFolder + '/css'));
 });
 
@@ -23,7 +24,7 @@ gulp.task('nunjucks', function () {
         .pipe(nunjucksRender({
             path: ['html/pages/', 'html/templates/']
         }))
-
+        .on('error', swallowError)
         .pipe(replace(/\.\.\//g,''))
         .pipe(rename(function(file){
             var result = file;
