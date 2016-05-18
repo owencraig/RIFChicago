@@ -32,4 +32,20 @@
             }
         }
     }
+
+    .img-overlay {
+        overflow:hidden;
+
+        @media #{$media-sm-min} {
+            max-height:300px;
+        } 
+
+        @media #{$media-md-min} {
+            height:175px;
+        }
+
+        @media #{$media-lg-min} {
+            height:250px;
+        }
+    }
 }
