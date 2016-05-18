@@ -1,36 +1,34 @@
 ﻿@import "../variables";
 @import "../mixins";
 
-.programs-grid {
-    .three-equal-col {
+.three-equal-col.programs-grid {
+    @media #{$media-desktop-view} {
+        -ms-flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    > div {
         @media #{$media-desktop-view} {
-            -ms-flex-wrap: wrap;
-            -webkit-flex-wrap: wrap;
-            flex-wrap: wrap;
-            justify-content: flex-start;
+            display: flex;
+            margin-bottom: $grid-gutter-width;
+            width: 33.3333333333333%; //override smaller three col layout but keep styles
         }
 
-        > div {
-            @media #{$media-desktop-view} {
-                display: flex;
-                margin-bottom: $grid-gutter-width;
-                width: 33.3333333333333%; //override smaller three col layout but keep styles
+        > .border {
+            border: 2px solid $light-green;
+            border-radius: $default-border-radius;
+            padding: $grid-gutter-width;
+            position: relative;
+            text-align: center;
+
+            h3, p {
+                margin: $v-spacing-xs 0;
             }
 
-            > .border {
-                border: 2px solid $light-green;
-                border-radius: $default-border-radius;
-                padding: $grid-gutter-width;
-                position: relative;
-                text-align: center;
-
-                h3, p {
-                    margin: $v-spacing-xs 0;
-                }
-
-                img {
-                    @include box-shadow;
-                }
+            img {
+                @include box-shadow;
             }
         }
     }

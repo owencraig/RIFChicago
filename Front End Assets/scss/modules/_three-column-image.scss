@@ -1,24 +1,19 @@
 ﻿@import "../variables";
 @import "../mixins";
 
-.three-column-image {
-
-    h5 {
-        color:$light-grey;
-        margin-bottom:$v-spacing-sm;
-        text-align:center;
-    }
-
-    img {
+.one-equal-col > h5 {
+    color:$light-grey;
+    margin-bottom:$v-spacing-sm;
+    text-align:center;
+}
+    
+.three-equal-col {
+    > img {
         margin:auto;
-    }
-
-    .three-equal-col {
-        > div {
-            @media #{$media-desktop-view} {
-                align-content:center;
-                display:flex;
-            }
+        @media #{$media-desktop-view} {
+            align-content:center;
+            display:flex;
         }
     }
 }
+

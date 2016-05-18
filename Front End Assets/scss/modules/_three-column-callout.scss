@@ -1,23 +1,21 @@
 ﻿@import "../variables";
 @import "../mixins";
 
-.three-column-callout {
-    .three-equal-col {
-        @media #{$media-mobile-view} {
-            margin-left: 0;
-            margin-right: 0;
-        }
+.three-equal-col {
+    @media #{$media-mobile-view} {
+        margin-left: 0;
+        margin-right: 0;
+    }
 
-        > div {
-            @include color-text($white);
-            background: $light-blue;
-            border-radius: $default-border-radius;
-            padding: $grid-gutter-width-half 10px;
-            text-align: center;
+    div.home-donate-call-to-action {
+        @include color-text($white);
+        background: $light-blue;
+        border-radius: $default-border-radius;
+        padding: $grid-gutter-width-half 10px;
+        text-align: center;
 
-            h2, p {
-                margin: 0 0 15px;
-            }
+        h2, p {
+            margin: 0 0 15px;
         }
     }
-} 
+}
