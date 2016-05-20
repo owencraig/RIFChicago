@@ -6,11 +6,21 @@
 }
 
 .column a {
-    width: 100%;
+    width:100%;
     display: block;
     text-align: center;
     padding: 15px 0;
     text-decoration: none;
+}
+
+.ui-tabs-panel a {
+    border: 2px solid $light-green;
+    border-radius:5px;
+    font-weight: 500;
+
+    @media #{$media-mobile-view} {
+        margin-top:15px;
+    }
 }
 
 .content {
@@ -48,11 +58,11 @@
 .ui-tabs .ui-tabs-panel {
     border: 2px solid $light-green;
     border-top: none;
-    padding: 35px 15px 30px 15px;
+    padding: 30px;
 
     @media #{$media-xs} {
         border:none; 
-        padding: 15px;
+        padding: 15px 0;
     }
 }
 
@@ -126,15 +136,15 @@
 .other-amount {
     border: 2px solid $light-green;
     border-radius: 5px;
-    margin: 15px;
+    margin: 15px 0;
     margin-bottom: 25px;
     text-align: center;
     padding: 15px;
 
     @media #{$media-mobile-view} {
-        margin: 0 auto 15px;
-        padding: 5px;
-        width:90%; 
+        height:55px;
+        margin: 30px 0;
+        padding: 0;
     }
 }
 
@@ -149,6 +159,7 @@
     @media #{$media-mobile-view} {
         display: inline-block;
         font-size: 14px;
+        height:50px;  
         margin-left:10px; 
         width: 60%;
     }
