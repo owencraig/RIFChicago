@@ -36,7 +36,7 @@
                 }
             }
 
-            &.button {
+            &.button, &:last-child {
                 a {
                     @include button-rounded;
                     @include button-green;
