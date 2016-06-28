@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <link href='https://fonts.googleapis.com/css?family=Poppins:400,500,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css"> 
+    <link href="css/rif.css" rel="stylesheet" />
+
+    <script src="libs/jquery/jquery-1.12.1.min.js"></script>
+    <title>RIF Dev</title>
+</head>
+<body>
+
+    <header class="site-header"><div class="container">
+    <div class="logo-nav">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/rif-logo.png" class="desktop" />
+                <img src="images/rif-logo-mobile.png" class="mobile" />
+            </a>
+        </div>
+        <div class="mobile-nav-toggle">
+            <span></span>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="programs.html" title="Programs & Initiatives">Programs & Initiatives</a></li>
+                <li><a href="community.html" title="Get Involved">Get Involved</a></li>
+                <li><a href="about-us.html" title="About Us">About Us</a></li>
+                <li><a href="#" title="Book Club">Book Club</a></li>
+                <li class="last"><a href="donation.html" title="Donate">Donate</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+</header>
+
+    <div class="container page-wrapper">
+
+        <div class="page-content">
+            
+
+<div class="large-text-image-video-hero text-image-video-hero module">
+
+    <div class="rif-book"></div>
+
+    <div class="row">
+        <div class="large wrapper">
+
+            <!-- changing classes here can change background color: need to determine choices here -->
+            <div class="left">
+                <div class="bg-blue" data-scroll-speed="5">
+                    <h1>Page Title</h1>
+                    <p>Donsed odio dui. Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis.</p>
+                </div>
+            </div>
+            <div class="right">
+
+                <!-- they could place a video (modal) or an image here -->
+                <!-- if image:
+                <div class="img-wrapper">
+                    <img src="images/cms/text-image-hero.jpg"/>
+                </div>
+                -->
+                <!-- if video: -->
+                <div class="img-wrapper video-thumb">
+                    <img src="images/cms/lg-text-image-hero.jpg" />
+                    <i class="play" data-toggle="modal" data-target="#videoModal"></i>
+                </div><!-- /.video-thumb -->
+                <!-- VIDEO IS IN A MODAL: needs guid id in case there is more than one per page (and see above data-target, needs to match) -->
+                <div id="videoModal" class="modal video" tabindex="-1" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <span class="close" data-dismiss="modal" aria-label="Close"></span>
+                            </div>
+                            <div class="modal-body">
+                                <div class="responsive-iframe">
+    <iframe src="https://www.youtube.com/embed/tLt5rBfNucc" frameborder="0" allowfullscreen></iframe>
+</div>
+                            </div>
+                        </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+            </div><!-- /.right -->
+        </div><!-- /.wrapper -->
+    </div><!-- /.row -->
+</div><!-- /.large-text-image-video-hero -->
+
+<div class="text-with-circle-images module">
+
+    <div class="row">
+
+        <div class="images">
+            <div class="circle-img green small" data-scroll-speed="8">
+                <img src="images/cms/circle-img-test-2.jpg" alt="Image Alt"/>
+            </div>
+            <div class="circle-img orange large" data-scroll-speed="3">
+                <img src="images/cms/circle-img-test.jpg" alt="Image Alt" />
+            </div>
+        </div>
+
+        <div class="content">
+            <h3>Englewood Initiative</h3>
+            <p>Cras mattis consectetur purus sit amet fermentum. Donec sed odio dui. Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+            <p><a href="#" title="Link Title" class="text-cta">Read more</a></p>
+        </div>
+
+    </div><!--/.row -->
+</div><!-- /.text-with-circle-images -->
+
+
+<div class="text-left-image-right module">
+
+    <div class="row">
+
+        <div class="content">
+            <div>
+                <h3>Adolescents at Risk</h3>
+                <p>Cras mattis consectetur purus sit amet fermentum. Donec sed odio dui. Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+                <p><a href="#" title="Link Title" class="text-cta">Read more</a></p>
+            </div>
+        </div>
+
+        <div class="image">
+            <!-- class changes the color: orange, blue, green, white, purple -->
+            <div class="img-overlay purple">
+                <img src="images/cms/placeholder-image.jpg"/>
+            </div>
+        </div>
+
+    </div><!--/.row -->
+</div><!-- /.text-left-image-right -->
+
+<div class="content-callout-hero module">
+    <div class="row">
+        <div class="image-wrapper">
+            <img src="images/cms/content-callout-hero-placeholder.jpg" alt="Image Title" />
+        </div><!-- /.wrapper -->
+    </div><!-- /.row -->
+
+    <div class="content">
+        <div class="row">
+            <div class="content-wrapper">
+                <h3>Southside Zine</h3>
+                <p>Etiam porta sem malesuada magna mollis euismod. Maecenas sed diam eget risus varius blandit sit amet non magna. Fermentum massa justo sit amet risus.</p>
+                <p><a href="#" title="Link Title" class="btn green">Read more</a></p>
+            </div>
+        </div>       
+    </div><!-- /.content -->
+</div><!-- /.content-callout-hero -->
+
+<div class="free-text-block module">
+  <div class="content">
+
+    <!-- content goes here -->
+    <h3>Free text block example</h3><br />
+    <p>Bacon ipsum dolor amet shank beef ribs biltong landjaeger prosciutto beef doner ham. Ham hock spare ribs t-bone, boudin meatloaf filet mignon short loin kevin doner. Pastrami tenderloin alcatra leberkas filet mignon rump frankfurter, prosciutto kevin tongue fatback kielbasa. Tri-tip hamburger prosciutto cupim meatball swine. Filet mignon boudin kielbasa pancetta, ball tip bresaola beef ribs drumstick kevin. Hamburger shankle venison rump pancetta ribeye.</p>
+    <p>Shoulder pork chop ball tip meatball jerky. Pastrami beef ribs boudin turducken ham capicola prosciutto meatloaf ground round shoulder. Meatloaf shank beef ribs, leberkas cow pork loin jowl corned beef strip steak sirloin ground round meatball. Prosciutto chuck tail tongue ground round.</p>
+    <p>Any content or even <a href="#">links</a> can go in here.</p> 
+  </dvi>
+</div>
+ 
+<div class="text-with-circle-images module">
+
+    <div class="row">
+
+        <div class="images">
+            <div class="circle-img green small" data-scroll-speed="8">
+                <img src="images/cms/circle-img-test-2.jpg" alt="Image Alt"/>
+            </div>
+            <div class="circle-img orange large" data-scroll-speed="3">
+                <img src="images/cms/circle-img-test.jpg" alt="Image Alt" />
+            </div>
+        </div>
+
+        <div class="content">
+            <h3>Englewood Initiative</h3>
+            <p>Cras mattis consectetur purus sit amet fermentum. Donec sed odio dui. Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+            <p><a href="#" title="Link Title" class="text-cta">Read more</a></p>
+        </div>
+
+    </div><!--/.row -->
+</div><!-- /.text-with-circle-images -->
+
+
+
+
+        </div>
+
+        <!-- bottom footer -->
+        <footer class="main-footer">
+    <div class="row">
+        <div class="left">
+            <ul class="social-media-list">
+                <li><a href="#" class="instagram"></a></li>
+                <li><a href="#" class="twitter"></a></li>
+                <li><a href="#" class="facebook"></a></li>
+            </ul>
+
+            <h3>Contact Us</h3>
+            <p class="contact">
+                3 Westbrook Corporate Center, Suite 200<br />
+                Westchester, IL 60154<br />
+                708.884.1582 | 708.884.0751 Fax<br />
+                <a href="mailto:m.case@rifinchicago.org">m.case@rifinchicago.org</a>
+            </p>
+
+            <nav class="footer-navigation">
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Teachers</a></li>
+                    <li><a href="#">Members</a></li>
+                    <li><a href="#">Forms</a></li>
+                </ul>
+            </nav>
+
+            <div class="copyright">
+                <span>
+                    &copy;2016 RIF in Chicago. RIF is a 501 (C)(3).
+                </span>
+                <ul>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Legal Notice</a></li>
+                    <li><a href="#">Financial Reports</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="right">
+            <h5>An Organization You Can Trust</h5>
+            <p>With your help, we can change lives. It’s as simple as giving children the power to choose, read and keep books of their own.</p>
+            <p class="medium">Expenses: Program 87%, Administrative 9%, Fundraising 4%.</p>
+        </div>
+    </div>
+</footer>
+
+    </div><!-- /.container-->
+
+    <script src="libs/bootstrap/javascripts/bootstrap.min.js"></script>
+    <script src="scripts/third-party/freewall.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script data-main="scripts/rif-main" src="scripts/require.js"></script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-571a8ab51dd5630e"></script>
+</body>
+</html>
