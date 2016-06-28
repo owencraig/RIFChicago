@@ -165,7 +165,7 @@ a:active,
 // COLOR OVERLAYS & CIRCLES
 .circle-img {
     @include circle-img-base;
-    
+
     img {
         @include img-responsive;
     }
@@ -284,5 +284,5 @@ a:active,
 }
 
 // HIGHLIGHT COLOR
-::-moz-selection { background: #e90f22; }
-::selection { background: #e90f22; }
+::-moz-selection { background: $light-green; }
+::selection { background: $light-green; }

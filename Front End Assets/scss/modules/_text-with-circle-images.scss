@@ -2,7 +2,7 @@
 @import "../mixins";
 
 .text-with-circle-images {
-    
+
     .images {
         @include make-md-column-offset(2);
         @include make-md-column(4);
@@ -15,6 +15,10 @@
 
     .content {
         @include make-md-column(4);
+        
+        @media #{$media-desktop-view} {
+          margin-left: 0;
+        }
     }
 
     h3 {
@@ -26,7 +30,7 @@
             left:0;
             position:absolute;
             top:-120px;
-        }        
+        }
     }
 
 }
